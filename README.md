@@ -1,9 +1,12 @@
-# Databricks Workshop
+# Cloud Scale Advanced Analtyics
 
-Experience Azure Databricks and Azure Machine Leaning Studio
+Experience end-to-end Advanced Analytics on cloud using Blob, ADF, Databricks, SQLDB/DW and Azure Machine Leaning Studio.
+
 Thu out this hands on lab Understand how to apply followings for you work:
 
+* ADF
 * Databricks
+* SQLDB/DW
 * Azure ML Studio
 
 After the workshop you will be able to:
@@ -18,9 +21,9 @@ After the workshop you will be able to:
 ## Briefing
 
 Overview and intro about Azure Data Services
-	Focus on data preparation and machine learning experiments 
-	demo
-		* Databricks and ML Studio
+Focus on data preparation and machine learning experiments 
+demo
+	* Databricks and ML Studio
 
 ## Hands on lab
 Architecture and scenario
