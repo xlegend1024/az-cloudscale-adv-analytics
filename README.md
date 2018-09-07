@@ -28,8 +28,18 @@ Architecture and scenario
 ### Architecture
 ![overallarch](./images/arch01.01.png)
 
-### Scenario 
+### Scenario
 
-	
-	
-		
+
+
+```bash
+ dbutils.fs.put("dbfs:/databricks/init/init.bash" ,"""
+ #!/bin/bash
+ sudo echo export AZURE_STORAGE_CONNECTION_STRING="\\"DefaultEndpointsProtocol=https;AccountName=$myAccountName$;AccountKey=$myAccountKey$\\"" >> /databricks/spark/conf/spark-env.sh
+ """, True)
+ ```
+
+---
+
+## Sources and references
+* https://docs.microsoft.com/en-us/azure/machine-learning/studio/azure-ml-customer-churn-scenario
