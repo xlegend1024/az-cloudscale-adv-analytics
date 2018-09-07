@@ -6,7 +6,6 @@ Thu out this hands on lab Understand how to apply followings for you work:
 * Databricks
 * Azure ML Studio
 
-
 After the workshop you will be able to:
 
 1. Understand process and architecture
@@ -27,7 +26,7 @@ Overview and intro about Azure Data Services
 Architecture and scenario
 
 ### Architecture
-
+![overallarch](./images/arch01.01.png)
 
 ### Scenario 
 
