@@ -6,7 +6,7 @@ Thu out this hands on lab Understand how to apply followings for you work:
 
 * ADF
 * Databricks
-* SQLDB/DW
+* SQLDB
 * Azure ML Studio
 
 After the workshop you will be able to:
@@ -32,6 +32,38 @@ Architecture and scenario
 
 ### Scenario
 
+Lab 00 Create hands on lab environment 
+
+	Download Azure template (json) file to your local PC
+	
+	Click on following link and upload the Azure template file to Azure
+
+	Make sure you have a resource group and Azure Key Vault, Blob, SQLDB in the resource group
+
+	
+Lab 01 Ingest
+
+	Create ADF 
+
+		Create Connections HTTPs and Blob
+		Create Datasets for both HTTPs and Blob
+		Create Copy activity
+
+Lab 02 Data wrangling  
+
+	Before the lab -> Databricks tour (10mins)
+	Create Azure Databricks
+	Import notebook from (https://raw.githubusercontent.com/xlegend1024/az-cloudscale-adv-analytics/master/AzureDatabricks/02.datawrangling.ipynb)
+	Update widget parameters 
+	Run differen languages (Python, Scala, R, SQL) to load data from blob to databricks
+	Data wrangling
+	Save final training dataset to blob
+
+Lab 03. Modeling 
+
+Lab 04. Operationalize score model
+
+Lab 05. Run 
 
 
 ```bash
