@@ -17,11 +17,10 @@ After the workshop you will be able to:
 1. Expermiments on data and select  
 1. Deploy and interact with score model
 
-
 ## Briefing
 
 Overview and intro about Azure Data Services
-Focus on data preparation and machine learning experiments 
+Focus on data preparation and machine learning experiments
 demo
 	* Databricks and ML Studio
 
