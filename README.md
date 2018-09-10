@@ -32,18 +32,20 @@ Architecture and scenario
 
 ### Scenario
 
-Lab 00 Create hands on lab environment 
+Lab 00 Create hands on lab environment
 
 	Download Azure template (json) file to your local PC
-	
+
 	Click on following link and upload the Azure template file to Azure
 
 	Make sure you have a resource group and Azure Key Vault, Blob, SQLDB in the resource group
 
+		Restore SQL DB from SQLDB backup
+
 	
 Lab 01 Ingest
 
-	Create ADF 
+	Create ADF
 
 		Create Connections HTTPs and Blob
 		Create Datasets for both HTTPs and Blob
@@ -59,12 +61,13 @@ Lab 02 Data wrangling
 	Data wrangling
 	Save final training dataset to blob
 
-Lab 03. Modeling 
+Lab 03. Modeling
 
 Lab 04. Operationalize score model
 
-Lab 05. Run 
+Lab 05. Run
 
+---
 
 ```bash
  dbutils.fs.put("dbfs:/databricks/init/init.bash" ,"""
