@@ -34,13 +34,7 @@ Architecture and scenario
 
 Lab 00 Create hands on lab environment
 
-<<<<<<< HEAD
 	Click link to create lab environment
-=======
-	Download Azure template (json) file to your local PC
-
-	Click on following link and upload the Azure template file to Azure
->>>>>>> 23159101f4f510c2060885a4dc9366675bc5de64
 
 	Make sure you have a resource group and Azure Key Vault, Blob, SQLDB in the resource group
 
