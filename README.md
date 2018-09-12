@@ -34,7 +34,13 @@ Architecture and scenario
 
 Lab 00 Create hands on lab environment
 
+<<<<<<< HEAD
 	Click link to create lab environment
+=======
+	Download Azure template (json) file to your local PC
+
+	Click on following link and upload the Azure template file to Azure
+>>>>>>> 23159101f4f510c2060885a4dc9366675bc5de64
 
 	Make sure you have a resource group and Azure Key Vault, Blob, SQLDB in the resource group
 
@@ -60,6 +66,7 @@ Lab 02 Data wrangling
 	Save final training dataset to blob
 
 Lab 03. Modeling
+<<<<<<< HEAD
 
 	(Demo) Azure ML experiments
 	Access the training dataset and import into Azure ML Studio
@@ -78,6 +85,13 @@ Lab 05. Run
 	Create a new pipeline for batch ml processing
 	
 
+=======
+
+Lab 04. Operationalize score model
+
+Lab 05. Run
+
+>>>>>>> 23159101f4f510c2060885a4dc9366675bc5de64
 ---
 
 ```bash
