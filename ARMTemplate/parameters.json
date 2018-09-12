@@ -1,0 +1,81 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "servers_mtcsdta_name": {
+            "value": null
+        },
+        "vaults_keyvaultdtatrack2_name": {
+            "value": null
+        },
+        "storageAccounts_mtcsdtatrack2_name": {
+            "value": null
+        },
+        "advisors_DropIndex_name": {
+            "value": null
+        },
+        "keys_ServiceManaged_name": {
+            "value": null
+        },
+        "advisors_CreateIndex_name": {
+            "value": null
+        },
+        "databases_mtcsdtatrack2_name": {
+            "value": null
+        },
+        "advisors_DefragmentIndex_name": {
+            "value": null
+        },
+        "auditingPolicies_Default_name": {
+            "value": null
+        },
+        "advisors_ForceLastGoodPlan_name": {
+            "value": null
+        },
+        "advisors_DbParameterization_name": {
+            "value": null
+        },
+        "encryptionProtector_current_name": {
+            "value": null
+        },
+        "auditingPolicies_Default_name_1": {
+            "value": null
+        },
+        "databases_master_name": {
+            "value": null
+        },
+        "secrets_dest_blob_connstring_name": {
+            "value": null
+        },
+        "geoBackupPolicies_Default_name": {
+            "value": null
+        },
+        "advisors_DropIndex_name_1": {
+            "value": null
+        },
+        "advisors_CreateIndex_name_1": {
+            "value": null
+        },
+        "advisors_DefragmentIndex_name_1": {
+            "value": null
+        },
+        "auditingPolicies_Default_name_2": {
+            "value": null
+        },
+        "geoBackupPolicies_Default_name_1": {
+            "value": null
+        },
+        "transparentDataEncryption_current_name": {
+            "value": null
+        },
+        "advisors_ForceLastGoodPlan_name_1": {
+            "value": null
+        },
+        "advisors_DbParameterization_name_1": {
+            "value": null
+        },
+        "transparentDataEncryption_current_name_1": {
+            "value": null
+        }
+    }
+}

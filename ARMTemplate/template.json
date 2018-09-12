@@ -1,0 +1,576 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "servers_mtcsdta_name": {
+            "defaultValue": "mtcsdta",
+            "type": "String"
+        },
+        "vaults_keyvaultdtatrack2_name": {
+            "defaultValue": "keyvaultdtatrack2",
+            "type": "String"
+        },
+        "storageAccounts_mtcsdtatrack2_name": {
+            "defaultValue": "mtcsdtatrack2",
+            "type": "String"
+        },
+        "advisors_DropIndex_name": {
+            "defaultValue": "DropIndex",
+            "type": "String"
+        },
+        "keys_ServiceManaged_name": {
+            "defaultValue": "ServiceManaged",
+            "type": "String"
+        },
+        "advisors_CreateIndex_name": {
+            "defaultValue": "CreateIndex",
+            "type": "String"
+        },
+        "databases_mtcsdtatrack2_name": {
+            "defaultValue": "mtcsdtatrack2",
+            "type": "String"
+        },
+        "advisors_DefragmentIndex_name": {
+            "defaultValue": "DefragmentIndex",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "advisors_ForceLastGoodPlan_name": {
+            "defaultValue": "ForceLastGoodPlan",
+            "type": "String"
+        },
+        "advisors_DbParameterization_name": {
+            "defaultValue": "DbParameterization",
+            "type": "String"
+        },
+        "encryptionProtector_current_name": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name_1": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "databases_master_name": {
+            "defaultValue": "master",
+            "type": "String"
+        },
+        "secrets_dest_blob_connstring_name": {
+            "defaultValue": "dest-blob-connstring",
+            "type": "String"
+        },
+        "geoBackupPolicies_Default_name": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "advisors_DropIndex_name_1": {
+            "defaultValue": "DropIndex",
+            "type": "String"
+        },
+        "advisors_CreateIndex_name_1": {
+            "defaultValue": "CreateIndex",
+            "type": "String"
+        },
+        "advisors_DefragmentIndex_name_1": {
+            "defaultValue": "DefragmentIndex",
+            "type": "String"
+        },
+        "auditingPolicies_Default_name_2": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "geoBackupPolicies_Default_name_1": {
+            "defaultValue": "Default",
+            "type": "String"
+        },
+        "transparentDataEncryption_current_name": {
+            "defaultValue": "current",
+            "type": "String"
+        },
+        "advisors_ForceLastGoodPlan_name_1": {
+            "defaultValue": "ForceLastGoodPlan",
+            "type": "String"
+        },
+        "advisors_DbParameterization_name_1": {
+            "defaultValue": "DbParameterization",
+            "type": "String"
+        },
+        "transparentDataEncryption_current_name_1": {
+            "defaultValue": "current",
+            "type": "String"
+        }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.KeyVault/vaults/keyvaultdtatrack2'.",
+            "type": "Microsoft.KeyVault/vaults",
+            "name": "[parameters('vaults_keyvaultdtatrack2_name')]",
+            "apiVersion": "2016-10-01",
+            "location": "westus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "sku": {
+                    "family": "A",
+                    "name": "Standard"
+                },
+                "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+                "accessPolicies": [
+                    {
+                        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+                        "objectId": "066a5242-16bf-4435-a097-69b4e8274bba",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List",
+                                "Update",
+                                "Create",
+                                "Import",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore",
+                                "ManageContacts",
+                                "ManageIssuers",
+                                "GetIssuers",
+                                "ListIssuers",
+                                "SetIssuers",
+                                "DeleteIssuers"
+                            ]
+                        }
+                    },
+                    {
+                        "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47",
+                        "objectId": "e2da1189-efb1-477a-b907-3dcc8cdb5513",
+                        "permissions": {
+                            "keys": [],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set",
+                                "Delete",
+                                "Recover",
+                                "Backup",
+                                "Restore"
+                            ],
+                            "certificates": []
+                        }
+                    }
+                ],
+                "enabledForDeployment": false,
+                "enabledForDiskEncryption": false,
+                "enabledForTemplateDeployment": false
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta'.",
+            "type": "Microsoft.Sql/servers",
+            "kind": "v12.0",
+            "name": "[parameters('servers_mtcsdta_name')]",
+            "apiVersion": "2015-05-01-preview",
+            "location": "westus",
+            "scale": null,
+            "properties": {
+                "administratorLogin": "sqladmin",
+                "version": "12.0"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Storage/storageAccounts/mtcsdtatrack2'.",
+            "type": "Microsoft.Storage/storageAccounts",
+            "sku": {
+                "name": "Standard_LRS",
+                "tier": "Standard"
+            },
+            "kind": "StorageV2",
+            "name": "[parameters('storageAccounts_mtcsdtatrack2_name')]",
+            "apiVersion": "2018-03-01-preview",
+            "location": "westus",
+            "tags": {},
+            "scale": null,
+            "properties": {
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "virtualNetworkRules": [],
+                    "ipRules": [],
+                    "defaultAction": "Allow"
+                },
+                "supportsHttpsTrafficOnly": true,
+                "encryption": {
+                    "services": {
+                        "file": {
+                            "enabled": true
+                        },
+                        "blob": {
+                            "enabled": true
+                        }
+                    },
+                    "keySource": "Microsoft.Storage"
+                },
+                "accessTier": "Hot"
+            },
+            "dependsOn": []
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.KeyVault/vaults/keyvaultdtatrack2/secrets/dest-blob-connstring'.",
+            "type": "Microsoft.KeyVault/vaults/secrets",
+            "name": "[concat(parameters('vaults_keyvaultdtatrack2_name'), '/', parameters('secrets_dest_blob_connstring_name'))]",
+            "apiVersion": "2016-10-01",
+            "location": "westus",
+            "scale": null,
+            "properties": {
+                "attributes": {
+                    "enabled": true
+                }
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_keyvaultdtatrack2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/advisors/CreateIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('advisors_CreateIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/advisors/DropIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('advisors_DropIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/advisors/DbParameterization'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('advisors_DbParameterization_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/advisors/DefragmentIndex'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('advisors_DefragmentIndex_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/advisors/ForceLastGoodPlan'.",
+            "type": "Microsoft.Sql/servers/advisors",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('advisors_ForceLastGoodPlan_name'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/auditingPolicies",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('auditingPolicies_Default_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "fullAuditLogsTableName": "SQLDBAuditLogsMtcsdta",
+                "auditLogsTableName": "Mtcsdta",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/mtcsdtatrack2'.",
+            "type": "Microsoft.Sql/servers/databases",
+            "sku": {
+                "name": "S0",
+                "tier": "Standard"
+            },
+            "kind": "v12.0,user",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_mtcsdtatrack2_name'))]",
+            "apiVersion": "2017-03-01-preview",
+            "location": "westus",
+            "scale": null,
+            "properties": {
+                "collation": "SQL_Latin1_General_CP1_CI_AS",
+                "maxSizeBytes": 268435456000,
+                "catalogCollation": "SQL_Latin1_General_CP1_CI_AS",
+                "zoneRedundant": false
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/encryptionProtector/current'.",
+            "type": "Microsoft.Sql/servers/encryptionProtector",
+            "kind": "servicemanaged",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('encryptionProtector_current_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "serverKeyName": "ServiceManaged",
+                "serverKeyType": "ServiceManaged"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/keys/ServiceManaged'.",
+            "type": "Microsoft.Sql/servers/keys",
+            "kind": "servicemanaged",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('keys_ServiceManaged_name'))]",
+            "apiVersion": "2015-05-01-preview",
+            "scale": null,
+            "properties": {
+                "serverKeyType": "[parameters('keys_ServiceManaged_name')]"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/master/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_master_name'), '/', parameters('auditingPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsMtcsdtaMaster",
+                "auditLogsTableName": "MtcsdtaMaster",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/master/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_master_name'), '/', parameters('geoBackupPolicies_Default_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/master/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_master_name'), '/', parameters('transparentDataEncryption_current_name'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "status": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/mtcsdtatrack2/advisors/CreateIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_mtcsdtatrack2_name'), '/', parameters('advisors_CreateIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_mtcsdta_name'), parameters('databases_mtcsdtatrack2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/mtcsdtatrack2/advisors/DropIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_mtcsdtatrack2_name'), '/', parameters('advisors_DropIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_mtcsdta_name'), parameters('databases_mtcsdtatrack2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/mtcsdtatrack2/advisors/DbParameterization'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_mtcsdtatrack2_name'), '/', parameters('advisors_DbParameterization_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_mtcsdta_name'), parameters('databases_mtcsdtatrack2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/mtcsdtatrack2/advisors/DefragmentIndex'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_mtcsdtatrack2_name'), '/', parameters('advisors_DefragmentIndex_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_mtcsdta_name'), parameters('databases_mtcsdtatrack2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/mtcsdtatrack2/advisors/ForceLastGoodPlan'.",
+            "type": "Microsoft.Sql/servers/databases/advisors",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_mtcsdtatrack2_name'), '/', parameters('advisors_ForceLastGoodPlan_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "scale": null,
+            "properties": {
+                "autoExecuteValue": "Disabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_mtcsdta_name'), parameters('databases_mtcsdtatrack2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/mtcsdtatrack2/auditingPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/auditingPolicies",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_mtcsdtatrack2_name'), '/', parameters('auditingPolicies_Default_name_2'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "auditingState": "New",
+                "eventTypesToAudit": "PlainSQL_Success,PlainSQL_Failure,ParameterizedSQL_Success,ParameterizedSQL_Failure,StoredProcedure_Success,StoredProcedure_Failure,Login_Success,Login_Failure,TransactionManagement_Success,TransactionManagement_Failure",
+                "storageAccountName": null,
+                "storageAccountKey": null,
+                "storageAccountSecondaryKey": null,
+                "storageTableEndpoint": null,
+                "storageAccountResourceGroupName": null,
+                "storageAccountSubscriptionId": null,
+                "useServerDefault": "Enabled",
+                "fullAuditLogsTableName": "SQLDBAuditLogsMtcsdtaMtcsdtatrack2",
+                "auditLogsTableName": "MtcsdtaMtcsdtatrack2",
+                "retentionDays": "0"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_mtcsdta_name'), parameters('databases_mtcsdtatrack2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/mtcsdtatrack2/geoBackupPolicies/Default'.",
+            "type": "Microsoft.Sql/servers/databases/geoBackupPolicies",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_mtcsdtatrack2_name'), '/', parameters('geoBackupPolicies_Default_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "state": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_mtcsdta_name'), parameters('databases_mtcsdtatrack2_name'))]"
+            ]
+        },
+        {
+            "comments": "Generalized from resource: '/subscriptions/256c7222-4083-4ba7-8714-baa0df54bfe6/resourceGroups/mtcs-dta-track2/providers/Microsoft.Sql/servers/mtcsdta/databases/mtcsdtatrack2/transparentDataEncryption/current'.",
+            "type": "Microsoft.Sql/servers/databases/transparentDataEncryption",
+            "name": "[concat(parameters('servers_mtcsdta_name'), '/', parameters('databases_mtcsdtatrack2_name'), '/', parameters('transparentDataEncryption_current_name_1'))]",
+            "apiVersion": "2014-04-01",
+            "location": "West US",
+            "scale": null,
+            "properties": {
+                "status": "Enabled"
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Sql/servers', parameters('servers_mtcsdta_name'))]",
+                "[resourceId('Microsoft.Sql/servers/databases', parameters('servers_mtcsdta_name'), parameters('databases_mtcsdtatrack2_name'))]"
+            ]
+        }
+    ]
+}
