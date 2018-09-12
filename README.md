@@ -66,7 +66,6 @@ Lab 02 Data wrangling
 	Save final training dataset to blob
 
 Lab 03. Modeling
-<<<<<<< HEAD
 
 	(Demo) Azure ML experiments
 	Access the training dataset and import into Azure ML Studio
@@ -85,13 +84,6 @@ Lab 05. Run
 	Create a new pipeline for batch ml processing
 	
 
-=======
-
-Lab 04. Operationalize score model
-
-Lab 05. Run
-
->>>>>>> 23159101f4f510c2060885a4dc9366675bc5de64
 ---
 
 ```bash
