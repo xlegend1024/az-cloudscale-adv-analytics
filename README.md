@@ -11,7 +11,7 @@ Thu out this hands on lab Understand how to apply followings for you work:
 
 After the workshop you will be able to:
 
-1. Understand process and architecture
+1. Understand process and architecture for cloud scale andvanced analaytics project
 1. Create appropreate Azure services for data prep. & training environment
 1. Know how to wanggle data in a scale
 1. Expermiments on data and select  
@@ -34,9 +34,7 @@ Architecture and scenario
 
 Lab 00 Create hands on lab environment
 
-	Download Azure template (json) file to your local PC
-
-	Click on following link and upload the Azure template file to Azure
+	Click link to create lab environment
 
 	Make sure you have a resource group and Azure Key Vault, Blob, SQLDB in the resource group
 
@@ -53,7 +51,7 @@ Lab 01 Ingest
 
 Lab 02 Data wrangling  
 
-	Before the lab -> Databricks tour (10mins)
+	(Demo) Databricsk tour
 	Create Azure Databricks
 	Import notebook from (https://raw.githubusercontent.com/xlegend1024/az-cloudscale-adv-analytics/master/AzureDatabricks/02.datawrangling.ipynb)
 	Update widget parameters 
@@ -63,9 +61,22 @@ Lab 02 Data wrangling
 
 Lab 03. Modeling
 
+	(Demo) Azure ML experiments
+	Access the training dataset and import into Azure ML Studio
+
 Lab 04. Operationalize score model
 
+	(Demo) Azure ML operationalization
+	Create web service
+	Update inputs
+	Publish web service
+	Download a sample excel and test   
+
 Lab 05. Run
+
+	(Demo) ADF and ML 
+	Create a new pipeline for batch ml processing
+	
 
 ---
 
