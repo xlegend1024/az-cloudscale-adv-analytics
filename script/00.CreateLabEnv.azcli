@@ -1,0 +1,135 @@
+#!/bin/bash
+
+# Select Azure subscription
+az account list --output table
+
+echo "\n\r"
+
+read -p "Subscription Name for lab   " subName
+
+if [ ! -z "$subName" ]
+then
+    echo "You select " $subName " for the lab."
+    az account set --subscription "$subName" --verbose
+else
+    echo "Please run the script again!! EXIT"
+    exit
+fi
+
+# Set a parameter that will be used for password 
+echo "\r\n"
+read -p "Passowrd for the lab e.g.) 1q2w3e4r5t^Y:   " sqlpwd
+
+if [ ! -z "$sqlpwd" ]
+then
+    echo "You set password" $sqlpwd " for the lab."
+else
+    echo "Please run the script again!! EXIT"
+    exit
+fi
+
+# 3. get subscruption ID
+subId=$(az account show --output tsv --query [id])
+sleep 1
+# get tenant ID 
+tenantId=$(az account show --output tsv --query [tenantId])
+sleep 1
+# set resource group name
+# if you have exsiting one please use the one
+num=$(shuf -i0-1000 -n1)
+rgName=azhol-$num-rg #Save it as ps1
+# set azure region
+loc=westus
+# set blob name that should be unique 
+blobName=blobdev$num # It will be saved it in parameter file
+# set container name that will be created in Blob
+containerName=sampledata
+# set SQL Server (Instance) name
+sqlsvrName=dev$num # It will be saved it in parameter file
+# Azure Key Vault Name
+avkName=akv$num
+# DO NOT CHANGE!!!
+sqldbName=wwimdb
+# DO NOT CHANGE!!!
+sqladm=sqladmin
+# Tag you can add or remove
+myTags="Env=HandsonLab"
+
+echo "SubscriptionID: " $subId
+echo "Tenant ID:" $tenantId
+echo "RG Name:" $rgName
+echo "Location:" $loc
+echo "Blob:" $blobName
+echo "Conatiner:" $containerName
+echo "SQL Server:" $sqlsvrName
+echo "SQL Database:" $sqladm
+
+# Create the Resource Group
+# if you have exsiting one you can skip this part
+echo "Create Resource Group " $rgName
+az group create --name $rgName --location $loc --tags $myTags
+
+# Storage Account
+# Create the Storage Account
+echo "Create Blob " $blobName
+az storage account create --name $blobName --resource-group $rgName --sku Standard_LRS --location $loc --tags $myTags
+
+# Get blob connection string 
+blobConn=$(az storage account show-connection-string --name $blobName --resource-group $rgName --output tsv)
+
+# Create a container
+echo "Create container in the blob" $containerName 
+az storage container create --name $containerName --connection-string $blobConn
+
+# Create a DB and restore Database from backup
+# Download Sample DB (Backup)
+echo "Download a sample DB"
+file_to_upload="./WideWorldImportersDW-Standard.bacpac"
+objName=WideWorldImportersDW-Standard.bacpac
+# wget is tool you can download files
+# Cloud Shell has wget.exe on both Bash or Powershell 
+wget -O $file_to_upload https://github.com/Microsoft/sql-server-samples/releases/download/wide-world-importers-v1.0/WideWorldImportersDW-Standard.bacpac
+
+# Uploading a SQLDB Backup file
+echo "Upload sample db to blob"
+az storage blob upload --container-name $containerName --file $file_to_upload --name $objName --connection-string $blobConn
+# Confirm file is uploaded 
+az storage blob list --container-name $containerName --connection-string $blobConn --output table
+
+# Create SQL Server and restore database from backup 
+# Create a SQL Server
+echo "Create a SQL Server " $sqlsvrName
+az sql server create --admin-user $sqladm --admin-password $sqlpwd --location $loc --name $sqlsvrName --resource-group $rgName 
+
+# Update SQL Server Firewall rule
+# Opeing all firewall is NOT recommend for production or in any environment
+# Opening all IP address is for this demo and lab only
+az sql server firewall-rule create -n openall --start-ip-address 1.1.1.1 --end-ip-addres 255.255.255.255 -g $rgName -s $sqlsvrName
+
+# Create a SQL DB
+echo "Create a SQL DB " $sqldbName
+az sql db create --name $sqldbName --resource-group $rgName --server $sqlsvrName --service-objective P1 
+# Get uri where sql backup is
+bloburi="https://$blobName.blob.core.windows.net/$containerName/$objName"
+time=2020-01-01T00:00:00Z
+sas=$(az storage blob generate-sas --account-name $blobName --container-name $containerName --name $objName --permissions r --expiry $time --output tsv)
+# Restore SQL DB 
+echo "Restore DB"
+az sql db import -s $sqlsvrName -n $sqldbName -g $rgName -p $sqlpwd -u $sqladm --storage-key $sas --storage-key-type SharedAccessKey --storage-uri $bloburi
+
+# Create keyvault
+## Steps
+
+## 1. Retrieve data factory service identity by copying the value of "SERVICE IDENTITY APPLICATION ID" generated along with your factory. If you use ADF authoring UI, the service identity ID will be shown on the Azure Key Vault linked service creation window; you can also retrieve it from Azure portal, refer to Retrieve data factory service identity.
+## 2. Grant the service identity access to your Azure Key Vault. In your key vault -> Access policies -> Add new -> search this service identity application ID to grant Get permission in Secret permissions dropdown. It allows this designated factory to access secret in key vault.
+## 3. Create a linked service pointing to your Azure Key Vault. Refer to Azure Key Vault linked service.
+## 4. Create data store linked service, inside which reference the corresponding secret stored in key vault. Refer to reference secret stored in key vault.
+
+az keyvault create --name $avkName --resource-group $rgName --location $loc
+
+sqldbconn="\"Server=tcp:"$sqlsvrName".database.windows.net,1433;Database=wwimdb;User ID=sqladmin;Password="$sqlpwd";Encrypt=true;Connection Timeout=30;\""
+
+az keyvault secret set --vault-name $avkName --name 'dev-sqldbconn' --value '$sqldbconn'
+
+echo "Your Resource Group Name is: " $rgName
+echo "You SQL DB Password is:      " $sqlpwd
