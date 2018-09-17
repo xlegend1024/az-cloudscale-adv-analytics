@@ -27,44 +27,66 @@ demo
 ## Hands on lab
 Architecture and scenario
 
-### Architecture
+## Architecture
 ![overallarch](./images/arch01.01.png)
 
-### Scenario
+## Scenario
 
-Lab 00 Create hands on lab environment
+### Lab 00 Create hands on lab environment
 
-	Click link to create lab environment
+1. Run folling command from Cloudshell 
 
-	Make sure you have a resource group and Azure Key Vault, Blob, SQLDB in the resource group
+	```
+	wget -O az-adv-analytics.azcli https://raw.githubusercontent.com/xlegend1024/az-cloudscale-adv-analytics/master/script/00.CreateLabEnv.azcli
+	```
 
-		Restore SQL DB from SQLDB backup
+1. Run command to create a resource group and resource
 
+	Make sure use correct __Azure Subscription__ for the Hands-on lab.
+
+1. Make sure you have a resource group and Azure Key Vault, Blob, SQLDB in the resource group
 	
-Lab 01 Ingest
+### Lab 01 Ingest
 
-	Create ADF
+1. Create Azure Data Factory (v2)
 
-		Create Connections HTTPs and Blob
-		Create Datasets for both HTTPs and Blob
-		Create Copy activity
+1. Create Data Pipeline
 
-Lab 02 Data wrangling  
+	1. Create Connections HTTPs and Blob
+	1. Create Datasets for both HTTPs and Blob
+	1. Create Copy activity
 
-	(Demo) Databricsk tour
-	Create Azure Databricks
-	Import notebook from (https://raw.githubusercontent.com/xlegend1024/az-cloudscale-adv-analytics/master/AzureDatabricks/02.datawrangling.ipynb)
-	Update widget parameters 
-	Run differen languages (Python, Scala, R, SQL) to load data from blob to databricks
-	Data wrangling
-	Save final training dataset to blob
+### Lab 02 Data wrangling  
 
-Lab 03. Modeling
+(Demo) Databricsk tour
 
-	(Demo) Azure ML experiments
-	Access the training dataset and import into Azure ML Studio
+1. Create Azure Databricks 
 
-Lab 04. Operationalize score model
+1. Create Azure Databricks cluster 
+
+1. Import Notebook
+
+	1. Import from  https://raw.githubusercontent.com/xlegend1024/az-cloudscale-adv-analytics/master/AzureDatabricks/02.datawrangling.ipynb
+
+	1. Update widget parameters 
+
+	1. Run command from the notebook
+	
+	* Run differen languages (Python, Scala, R, SQL) to load data from blob to databricks
+	* Data wrangling
+	* Save final training dataset to blob
+
+### Lab 03. Modeling
+
+(Demo) Azure ML experiments
+
+1. Create Azure Machine Learning Studio 
+
+1. Access the training dataset and import into Azure ML Studio
+
+
+
+### Lab 04. Operationalize score model
 
 	(Demo) Azure ML operationalization
 	Create web service
@@ -72,7 +94,7 @@ Lab 04. Operationalize score model
 	Publish web service
 	Download a sample excel and test   
 
-Lab 05. Run
+### Lab 05. Run
 
 	(Demo) ADF and ML 
 	Create a new pipeline for batch ml processing
