@@ -5,7 +5,7 @@ az account list --output table
 
 echo "\n\r"
 
-read -p "Subscription Name for lab   " subName
+read -p "Subscription Name for lab>>   " subName
 
 if [ ! -z "$subName" ]
 then
@@ -18,7 +18,7 @@ fi
 
 # Set a parameter that will be used for password 
 echo "\r\n"
-read -p "Passowrd for the lab e.g.) 1q2w3e4r5t^Y:   " sqlpwd
+read -p "Passowrd for the lab e.g.) 1q2w3e4r5t^Y >>   " sqlpwd
 
 if [ ! -z "$sqlpwd" ]
 then
@@ -88,7 +88,7 @@ file_to_upload="./MTCS_DTA_DataAI_HOL.bacpac"
 objName=MTCS_DTA_DataAI_HOL.bacpac
 # wget is tool you can download files
 # Cloud Shell has wget.exe on both Bash or Powershell 
-wget -O $file_to_upload https://github.com/xlegend1024/az-cloudscale-adv-analytics/raw/master/sampledb/MTCS_DTA_DataAI_HOL.bacpac
+wget -O $file_to_upload https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/sampledb/MTCS_DTA_DataAI_HOL.bacpac
 
 # Uploading a SQLDB Backup file
 echo "Upload sample db to blob"
@@ -108,7 +108,7 @@ az sql server firewall-rule create -n openall --start-ip-address 1.1.1.1 --end-i
 
 # Create a SQL DB
 echo "Create a SQL DB " $sqldbName
-az sql db create --name $sqldbName --resource-group $rgName --server $sqlsvrName --service-objective P1 
+az sql db create --name $sqldbName --resource-group $rgName --server $sqlsvrName --service-objective S3 
 # Get uri where sql backup is
 bloburi="https://$blobName.blob.core.windows.net/$containerName/$objName"
 time=2020-01-01T00:00:00Z

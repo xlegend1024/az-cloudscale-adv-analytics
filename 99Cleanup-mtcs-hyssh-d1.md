@@ -1,0 +1,2 @@
+# Delete Resource Group
+
