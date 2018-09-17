@@ -5,7 +5,7 @@ az account list --output table
 
 echo "\n\r"
 
-read -p "Subscription Name for lab>>   " subName
+read -p "Type Subscription Name for this lab>>   " subName
 
 if [ ! -z "$subName" ]
 then
@@ -16,9 +16,19 @@ else
     exit
 fi
 
+chkName=$(az account list --output tsv --query '[?isDefault].name')
+
+if [ "$subName" == "$chkName" ]
+then 
+    echo "Subscripion Name has confirmed"
+else 
+    echo "Please try again with correct subscription name"
+fi
+
 # Set a parameter that will be used for password 
 echo "\r\n"
-read -p "Passowrd for the lab e.g.) 1q2w3e4r5t^Y >>   " sqlpwd
+echo "Type Passowrd for the lab\r\n "
+read -p "e.g.) 1q2w3e4r5t^Y >>   " sqlpwd
 
 if [ ! -z "$sqlpwd" ]
 then
