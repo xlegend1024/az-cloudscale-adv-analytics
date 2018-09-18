@@ -26,7 +26,7 @@ fi
 
 # Set a parameter that will be used for password 
 echo ""
-echo "Type Passowrd for the lab\r\n "
+echo "Type Passowrd for the lab"
 read -p "e.g.) 1q2w3e4r5t^Y >>" sqlpwd
 
 if [ ! -z "$sqlpwd" ]; then
@@ -92,11 +92,11 @@ az storage container create --name $containerName --connection-string $blobConn
 # Create a DB and restore Database from backup
 # Download Sample DB (Backup)
 echo "Download a sample DB"
-file_to_upload="./MTCS_DTA_DataAI_HOL.bacpac"
-objName=MTCS_DTA_DataAI_HOL.bacpac
+file_to_upload="./wwimdb.bacpac"
+objName=wwimdb.bacpac
 # wget is tool you can download files
 # Cloud Shell has wget.exe on both Bash or Powershell 
-wget -O $file_to_upload https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/sampledb/1MTCS_DTA_DataAI_HOL.bacpac
+wget -O $file_to_upload https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/sampledb/0MTCS_DTA_DataAI_HOL.bacpac
 
 # Uploading a SQLDB Backup file
 echo "Upload sample db to blob"
