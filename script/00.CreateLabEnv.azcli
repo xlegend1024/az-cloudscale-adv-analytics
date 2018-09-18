@@ -22,6 +22,7 @@ then
     echo "Subscripion Name has confirmed"
 else 
     echo "Please try again with correct subscription name"
+    exit
 fi
 
 # Set a parameter that will be used for password 
