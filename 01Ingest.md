@@ -1,16 +1,36 @@
 # 01. Ingest Data
 
-## Architecture 
+## Architecture
+
+    In this lab, we'll build data movement pipeline in *Azure Data Factory* to move data from a web service to Blob.
 
 ## 0. Access to Azure Portal
 
-Go to [Azure Portal](https://azure.portal.com) for lab.
+Go to [Azure Portal](https://azure.portal.com) for this lab.
 
 ## 1. Create Azure Data Factory
+
+__Click__ on '+ Create a resource' icon on the left panel, and __search __ _Data Factory_ from the search bar
+
+![00](./images/01.00.png)
+
+__Select__ _Data Factory_ and __click__ _create_ button, then you'll see New data factory blades
+
+Fill out the from and __click__ on _Create_
+
+![01](./images/01.01.png)
+
+When the Data Facotry is created, pin it to dashboard so you can access the service eay
+
+![02](./images/01.02.png)
 
 ## 2. Create Data Pipeline
 
 Create connections, datasets for source and destination. And then create pipeline that copies source data to destination.
+
+__Open__ the Data Factory and __click__ on _Author&Monitor_ link form the blades
+
+![03](./images/01.03.png)
 
 ### 2.1. Create Connections
 
@@ -49,9 +69,13 @@ __Drag and drop__ 'Copy Data' module from 'Move & Transform activity section to 
 __Click__ on the activity 'Copy Data' and select 'Source' tab in the bottom of the screen
 __Select__ customer_chrun_github' for 'Source Dataset'
 
+
+
 ## 3. Run the job
 
 To manualy start the data pipeline, __Click__ on _'Trigger Now'_ of _'Trigger'_ and then click _'Finish'_ to run the pipeline.
+
+
 
 ## 4. Monitor the job
 
