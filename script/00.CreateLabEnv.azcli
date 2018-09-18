@@ -29,8 +29,7 @@ echo ""
 echo "Type Passowrd for the lab\r\n "
 read -p "e.g.) 1q2w3e4r5t^Y >>" sqlpwd
 
-if [ ! -z "$sqlpwd" ]
-then
+if [ ! -z "$sqlpwd" ]; then
     echo "You set password" $sqlpwd " for the lab."
 else
     echo "Please run the script again!!"
