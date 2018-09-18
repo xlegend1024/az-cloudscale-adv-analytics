@@ -85,24 +85,19 @@ Access the training dataset and import into Azure ML Studio.
 
 ### [Lab 04. Operationalize score model](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/04Operationalization.md)
 
-	(Demo) Azure ML operationalization
-	Create web service
-	Update inputs
-	Publish web service
-	Download a sample excel and test   
+(Demo) Azure ML operationalization
+Create web service
+Update inputs
+Publish web service
+Download a sample excel and test   
 
 ### [Lab 05. Run](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/05RunMLBatch.md)
 
-	(Demo) ADF and ML
-	Create a new pipeline for batch ml processing
-	
+(Demo) ADF and ML
+Create a new pipeline for batch ml processing
 
 ---
 [Next > 01. Ingest Data](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/01Ingest.md)
-
----
-
-[Next > 02. Data Wrangling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
 
 ---
 
