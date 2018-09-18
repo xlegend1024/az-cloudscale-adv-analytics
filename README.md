@@ -33,17 +33,13 @@ Architecture and scenario
 
 ## Scenario
 
-### Lab 00 Create hands on lab environment
+### [Lab 00 Create hands on lab environment](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/00.SetupEnv.md)
 
 1. Open browser and go to [Azure Portal](https://portal.azure.com)
 
 1. Open cloud shell from the browser
 
 1. Download a script
-
-	```
-	wget -O az-adv-analytics.azcli https://raw.githubusercontent.com/xlegend1024/az-cloudscale-adv-analytics/master/script/00.CreateLabEnv.azcli
-	```
 
 1. Run command to create a resource group and resource
 
@@ -55,19 +51,13 @@ Make sure you use correct __Azure Subscription__ for the Hands-on lab.
 
 1. Make sure you have a resource group and Azure Key Vault, Blob, SQLDB in the resource group
 	
-### Lab 01 Ingest
+### [Lab 01 Ingest](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/01Ingest.md)
 
 1. Create Azure Data Factory (v2)
 
 1. Create Data Pipeline
 
-	1. Create Connections HTTPs and Blob
-	1. Create Datasets for both HTTPs and Blob
-	1. Create Copy activity
-
-### Lab 02 Data wrangling  
-
-(Demo) Databricsk tour
+### [Lab 02 Data wrangling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
 
 1. Create Azure Databricks
 
@@ -85,9 +75,7 @@ Make sure you use correct __Azure Subscription__ for the Hands-on lab.
 		* Data wrangling
 		* Save final training dataset to blob
 
-### Lab 03. Modeling
-
-(Demo) Azure ML experiments
+### [Lab 03. Modeling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/03Modeling.md)
 
 1. Create Azure Machine Learning Studio
 
@@ -95,7 +83,7 @@ Make sure you use correct __Azure Subscription__ for the Hands-on lab.
 
 Access the training dataset and import into Azure ML Studio.
 
-### Lab 04. Operationalize score model
+### [Lab 04. Operationalize score model](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/04Operationalization.md)
 
 	(Demo) Azure ML operationalization
 	Create web service
@@ -103,20 +91,18 @@ Access the training dataset and import into Azure ML Studio.
 	Publish web service
 	Download a sample excel and test   
 
-### Lab 05. Run
+### [Lab 05. Run](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/05RunMLBatch.md)
 
 	(Demo) ADF and ML
 	Create a new pipeline for batch ml processing
 	
 
 ---
+[Next > 01. Ingest Data](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/01Ingest.md)
 
-```bash
- dbutils.fs.put("dbfs:/databricks/init/init.bash" ,"""
- #!/bin/bash
- sudo echo export AZURE_STORAGE_CONNECTION_STRING="\\"DefaultEndpointsProtocol=https;AccountName=$myAccountName$;AccountKey=$myAccountKey$\\"" >> /databricks/spark/conf/spark-env.sh
- """, True)
- ```
+---
+
+[Next > 02. Data Wrangling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
 
 ---
 
