@@ -96,7 +96,7 @@ file_to_upload="./wwimdb.bacpac"
 objName=wwimdb.bacpac
 # wget is tool you can download files
 # Cloud Shell has wget.exe on both Bash or Powershell 
-wget -O $file_to_upload https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/sampledb/0MTCS_DTA_DataAI_HOL.bacpac
+wget -O $file_to_upload https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/sampledb/wwimdb.bacpac
 
 # Uploading a SQLDB Backup file
 echo "Upload sample db to blob"
