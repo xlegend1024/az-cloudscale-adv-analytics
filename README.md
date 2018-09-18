@@ -81,15 +81,15 @@ Make sure you use correct __Azure Subscription__ for the Hands-on lab.
 
 1. Create workspace
 
-Access the training dataset and import into Azure ML Studio.
-
 ### [Lab 04. Operationalize score model](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/04Operationalization.md)
 
-(Demo) Azure ML operationalization
-Create web service
-Update inputs
-Publish web service
-Download a sample excel and test   
+1. Create web service
+
+1. Update inputs
+
+1. Publish web service
+
+1. Download a sample excel and test   
 
 ### [Lab 05. Run](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/05RunMLBatch.md)
 
