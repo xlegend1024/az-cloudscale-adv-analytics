@@ -25,7 +25,7 @@ Data wrangling
 
 ### 3.4 Save final training dataset to blob
 
-### 3.5 (optional) Run Machine Learning
+### 3.5 (optional) Run Machine Learning in Databricks
 ---
 [Next > 03. Modeling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/03Modeling.md)
 

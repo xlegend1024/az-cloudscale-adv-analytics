@@ -33,47 +33,23 @@ Architecture and scenario
 
 ## Scenario
 
-### [Lab 00 Create hands on lab environment](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/00.SetupEnv.md)
+### [Lab 00. Create hands on lab environment](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/00.SetupEnv.md)
 
-1. Open browser and go to [Azure Portal](https://portal.azure.com)
+1. Create Hands-on Lab envrironment using a script
 
-1. Open cloud shell from the browser
-
-1. Download a script
-
-1. Run command to create a resource group and resource
-
-> Care with subscription name when you run the script
-
-![run script](./images/env01.01.png)
-
-Make sure you use correct __Azure Subscription__ for the Hands-on lab.
-
-1. Make sure you have a resource group and Azure Key Vault, Blob, SQLDB in the resource group
-	
-### [Lab 01 Ingest](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/01Ingest.md)
+### [Lab 01. Ingest](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/01Ingest.md)
 
 1. Create Azure Data Factory (v2)
 
 1. Create Data Pipeline
 
-### [Lab 02 Data wrangling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
+### [Lab 02. Data wrangling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
 
 1. Create Azure Databricks
 
 1. Create Azure Databricks cluster
 
-1. Import Notebook
-
-	1. Import from  https://raw.githubusercontent.com/xlegend1024/az-cloudscale-adv-analytics/master/AzureDatabricks/02.datawrangling.ipynb
-
-	1. Update widget parameters
-
-	1. Run command from the notebook
-	
-		* Run differen languages (Python, Scala, R, SQL) to load data from blob to databricks
-		* Data wrangling
-		* Save final training dataset to blob
+1. Import and Run Notebook
 
 ### [Lab 03. Modeling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/03Modeling.md)
 
@@ -89,15 +65,14 @@ Make sure you use correct __Azure Subscription__ for the Hands-on lab.
 
 1. Publish web service
 
-1. Download a sample excel and test   
+1. Download a sample excel and test
 
 ### [Lab 05. Run](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/05RunMLBatch.md)
 
-(Demo) ADF and ML
-Create a new pipeline for batch ml processing
+1. Create a new pipeline for batch ml processing
 
 ---
-[Next > 01. Ingest Data](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/01Ingest.md)
+[Start Lab > 01. Ingest Data](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/01Ingest.md)
 
 ---
 

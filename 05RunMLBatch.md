@@ -6,6 +6,7 @@
 
 Go to [Azure Portal](https://azure.portal.com) for lab.
 
+## 
 
 ---
 [Next > 99. Clean Up](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/99Cleanup.md)
