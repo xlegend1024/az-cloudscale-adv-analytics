@@ -1,6 +1,6 @@
 # 01. Ingest Data
 
-Architecture 
+## Architecture 
 
 ## 0. Access to Azure Portal
 
@@ -24,39 +24,40 @@ https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-
 ```
 
 __Select__ 'Anonymous' for 'Authentication type'
-
 __Click__ 'Finish'
-
-Create connection for destination, Azure Blob 
+__Create__ connection for destination, Azure Blob 
 
 ### 2.2. Create Datasets
 
-Click on '+ [add new factory resource]' button and click 'dataset'
-Search 'HTTP' and click. And click 'Finish' to configure a source dataset.
-Type name 'customer_churn_github' for the source dataset
+__Click__ on '+ [add new factory resource]' button and click 'dataset'
+__Search__ 'HTTP' and click. And click 'Finish' to configure a source dataset.
+__Type__ name 'customer_churn_github' for the source dataset
 Configure the connection for source dataset
 Congifure Linked service and Request method
 Congigure file format setting
-* Check on 'Column names in the first row' check box
+* __Check__ on 'Column names in the first row' check box
 
 Configure the connection for destination dataset
 Congifure Linked service and Request method
 Congigure file format setting
-* Check on 'Column names in the first row' check box
+* __Check__ on 'Column names in the first row' check box
 
 ### 2.3. Create Pipeline
 
-Create a new pipeline
-Drag and drop 'Copy Data' from 'Move & Transform activity section
-Click on the activity 'Copy Data' and select 'Source' tab in the bottom of the screen
-Select customer_chrun_github' for 'Source Dataset'
+__Create__ a new pipeline
+__Drag and drop__ 'Copy Data' module from 'Move & Transform activity section to canvas
+__Click__ on the activity 'Copy Data' and select 'Source' tab in the bottom of the screen
+__Select__ customer_chrun_github' for 'Source Dataset'
 
 ## 3. Run the job
 
+To manualy start the data pipeline, __Click__ on _'Trigger Now'_ of _'Trigger'_ and then click _'Finish'_ to run the pipeline.
+
 ## 4. Monitor the job
 
-
-
+From the lift panel, __click__ monitor icon to see pipeline run status and history of jobs
+To see detail logs of activies in pipeline, __click__ on pipeline icon
+__Click__ on _input_, _output_ and _detail_ to see raw log of the activities 
 
 ---
 [Next > 02. Data Wrangling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
