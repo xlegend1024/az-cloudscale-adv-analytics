@@ -1,13 +1,13 @@
 #!/bin/bash
 
+# Select Azure subscription
 az account list --output table
 
-echo ""
+echo "\n\r"
 
-read -p "Type Subscription Name for this lab>>   " subName
+read -p "Subscription Name for lab>>" subName
 
-if [ ! -z "$subName" ]
-then
+if [ ! -z "$subName" ]; then
     echo "You select " $subName " for the lab."
     az account set --subscription "$subName" --verbose
 else
@@ -15,10 +15,9 @@ else
     exit
 fi
 
-chkName=$(az account list --output tsv --query '[?isDefault].name')
+chkName=$(az account list --output tsv --query "[?isDefault].name")
 
-if [ "$subName" == "$chkName" ]
-then 
+if [ "$subName" = "$chkName" ]; then
     echo "Subscripion Name has confirmed"
 else 
     echo "Please try again with correct subscription name"
@@ -28,13 +27,13 @@ fi
 # Set a parameter that will be used for password 
 echo ""
 echo "Type Passowrd for the lab\r\n "
-read -p "e.g.) 1q2w3e4r5t^Y >>   " sqlpwd
+read -p "e.g.) 1q2w3e4r5t^Y >>" sqlpwd
 
 if [ ! -z "$sqlpwd" ]
 then
     echo "You set password" $sqlpwd " for the lab."
 else
-    echo "Please run the script again!! EXIT"
+    echo "Please run the script again!!"
     exit
 fi
 
