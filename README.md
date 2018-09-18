@@ -78,3 +78,4 @@ Architecture and scenario
 
 ## Sources and references
 * https://docs.microsoft.com/en-us/azure/machine-learning/studio/azure-ml-customer-churn-scenario
+* https://github.com/Azure/MachineLearningSamples-ChurnPrediction 

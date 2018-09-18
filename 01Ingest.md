@@ -34,18 +34,39 @@ __Open__ the Data Factory and __click__ on _Author&Monitor_ link form the blades
 
 ### 2.1. Create Connections
 
-__Click__ 'Connections' icon bottom of lift coner.
-__Search__ 'HTTP' and click. And click 'Continue' to configure a source dataset.
-__Create__ connection for source, web service
-    Use following link for 'Base URL'
+__Click__ on _Author_  and then __click__ _Connections_ at the bottom of the screen
+
+![04](./images/01.04.png)
+
+To add new _Linked services_ (e.g. connection string), __click__ on _+ NEW_
+
+An then __Search__ 'HTTP' from the search bar and select the _HTTP_ and then click 'Continue' to configure a source dataset.
+
+![05](./images/01.05.png)
+
+__Create__ connection for source, name it as 'src_web_churn_csv'
+
+Use following link for 'Base URL'
 
 ```
-https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017 
+https://raw.githubusercontent.com/Azure/MachineLearningSamples-ChurnPrediction/master/data/CATelcoCustomerChurnTrainingSample.csv
 ```
 
 __Select__ 'Anonymous' for 'Authentication type'
+
 __Click__ 'Finish'
-__Create__ connection for destination, Azure Blob 
+
+![06](./images/01.06.png)
+
+Add new _Linked services_ for Azure blob which will be used for store source data
+__click__ on _+ NEW_ and search Blob
+
+![06](./images/01.06.png)
+
+__Create__ connection for destination, name it as 'dst_blob_datalake'
+
+![07](./images/01.07.png)
+
 
 ### 2.2. Create Datasets
 
