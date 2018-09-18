@@ -1,7 +1,7 @@
 #!/bin/bash
 # Select Azure subscription
 az account list --output table
-echo "\n\r"
+echo ""
 read -p "Type Subscription Name for this lab>>   " subName
 
 if [ ! -z "$subName" ]
@@ -23,7 +23,7 @@ else
 fi
 
 # Set a parameter that will be used for password 
-echo "\r\n"
+echo ""
 echo "Type Passowrd for the lab\r\n "
 read -p "e.g.) 1q2w3e4r5t^Y >>   " sqlpwd
 
