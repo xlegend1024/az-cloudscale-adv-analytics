@@ -1,5 +1,5 @@
 #!/bin/bash
-# Select Azure subscription
+
 az account list --output table
 
 echo ""
