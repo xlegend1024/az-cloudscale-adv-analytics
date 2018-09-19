@@ -2,15 +2,22 @@
 
 ## Architecture
 
-    In this lab, we'll build data movement pipeline in *Azure Data Factory* to move data from a web service to Blob.
+In this lab, we'll build a data movement pipeline in __Azure Data Factory__ to move data from a web service to Blob
+Before you follow the steps, please make sure concept of ADF
+
+* Connections
+* Linked Service
+* Dataset
+* Activites
+* Pipeline
 
 ## 0. Access to Azure Portal
 
-Go to [Azure Portal](https://azure.portal.com) for this lab.
+Go to [Azure Portal](https://azure.portal.com) for this lab
 
 ## 1. Create Azure Data Factory
 
-__Click__ on '+ Create a resource' icon on the left panel, and __search __ _Data Factory_ from the search bar
+__Click__ on '+ Create a resource' icon on the left panel, and __search__ _Data Factory_ from the search bar
 
 ![00](./images/01.00.png)
 
@@ -20,7 +27,7 @@ Fill out the from and __click__ on _Create_
 
 ![01](./images/01.01.png)
 
-When the Data Facotry is created, pin it to dashboard so you can access the service eay
+When the Data Facotry is created, pin it to dashboard so you can access the service easy
 
 ![02](./images/01.02.png)
 
