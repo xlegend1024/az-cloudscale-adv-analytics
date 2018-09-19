@@ -2,11 +2,9 @@
 
 ## Architecture
 
-## 0. Access to Azure Portal
-
-Go to [Azure Portal](https://azure.portal.com) for lab.
-
 ## 1. Create Azure Machine Learning Studio
+
+Create a service from here [Azure Portal #Create ML Studio](https://ms.portal.azure.com/#create/Microsoft.MachineLearningWorkspace) for lab.
 
 Open a new browser or tap and go to [Azure ML Studio](https://studio.azureml.net)
 

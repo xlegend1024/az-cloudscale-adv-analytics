@@ -11,7 +11,7 @@ Before you follow the steps, please make sure concept of ADF
 
 ## 1. Create Azure Databricks
 
-Go to [Azure Portal](https://ms.portal.azure.com/#create/Microsoft.Databricks) to create Azure Databricks
+Create a service from here [Azure Portal #Create Azure Databricks](https://ms.portal.azure.com/#create/Microsoft.Databricks) to create Azure Databricks
 
 __Type__ Azure Databricks workspace name, e.g.) azhol92
 
