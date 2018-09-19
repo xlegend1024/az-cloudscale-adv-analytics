@@ -65,44 +65,101 @@ __click__ on _+ NEW_ and search Blob
 
 __Create__ connection for destination, name it as 'dst_blob_datalake'
 
-![07](./images/01.07.png)
-
+![08](./images/01.08.png)
 
 ### 2.2. Create Datasets
 
-__Click__ on '+ [add new factory resource]' button and click 'dataset'
-__Search__ 'HTTP' and click. And click 'Finish' to configure a source dataset.
-__Type__ name 'customer_churn_github' for the source dataset
-Configure the connection for source dataset
-Congifure Linked service and Request method
-Congigure file format setting
+2.2.1. Create Source dataset 
+
+__Click__ on '+ [add new factory resource]' button and click 'Dataset' to create source dataset
+
+![09](./images/01.09.png)
+
+__Search__ 'HTTP' and click. And click 'Finish' to configure a source dataset
+
+__Type__ name 'web_churn_csv' for the source dataset
+
+![10](./images/01.10.png)
+
+Configure _Linked Service_ for the connection of this source dataset which is 'src_web_churn_csv'
+
+![11](./images/01.11.png)
+
 * __Check__ on 'Column names in the first row' check box
 
-Configure the connection for destination dataset
-Congifure Linked service and Request method
-Congigure file format setting
-* __Check__ on 'Column names in the first row' check box
+![12](./images/01.12.png)
+
+2.2.2. Create Destination dataset
+
+__Click__ on '+ [add new factory resource]' button and click 'Dataset' to create destination dataset
+
+![13](./images/01.13.png)
+
+__Search__ 'Blob' and click. And click 'Finish' to configure a destination dataset
+
+__Type__ name 'blob_churn_csv' for the destination dataset
+
+__Click__ on _Connection_ tab to configure _Linked Service_ for the connection of destination dataset which is 'dst_blob_datalake'
+
+![14](./images/01.14.png)
+
+__Type__ 'ingest' for folder and 'customerchurnsource.csv' for file name
+
+![1401](./images/01.14.01.png)
+
+__Check__ on 'Column names in the first row' check box
+
+![15](./images/01.15.png)
 
 ### 2.3. Create Pipeline
 
-__Create__ a new pipeline
+To __Create__ a new pipeline, __click__ on '+ [add new factory resource]' and then __click__ 'Pipeline'
+
+![16](./images/01.16.png)
+
+Name the pipeline as 'copy_churn_web__blob'
+
+![17](./images/01.17.png)
+
 __Drag and drop__ 'Copy Data' module from 'Move & Transform activity section to canvas
-__Click__ on the activity 'Copy Data' and select 'Source' tab in the bottom of the screen
-__Select__ customer_chrun_github' for 'Source Dataset'
 
+![18](./images/01.18.png)
 
+Name the activity as 'Copy Data Activity'
+
+![19](./images/01.19.png)
+
+__Click__ on the activity 'Copy Data Activity', __select__ 'Source' tab in the bottom of the screen and then __select__ 'web_churn_csv' for the 'Source Dataset'
+
+![20](./images/01.20.png)
+
+__Click__ 'Sink' tab and __select__ 'blob_churn_csv' for the 'Sink Dataset'
+
+![21](./images/01.21.png)
+
+__Click__ 'Publishing' button
+
+![22](./images/01.22.png)
 
 ## 3. Run the job
 
 To manualy start the data pipeline, __Click__ on _'Trigger Now'_ of _'Trigger'_ and then click _'Finish'_ to run the pipeline.
 
-
+![23](./images/01.23.png)
 
 ## 4. Monitor the job
 
 From the lift panel, __click__ monitor icon to see pipeline run status and history of jobs
+
+![24](./images/01.24.png)
+
 To see detail logs of activies in pipeline, __click__ on pipeline icon
+
+![26](./images/01.26.png)
+
 __Click__ on _input_, _output_ and _detail_ to see raw log of the activities 
+
+![27](./images/01.27.png)
 
 ---
 [Next > 02. Data Wrangling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
