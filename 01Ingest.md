@@ -100,11 +100,11 @@ Configure _Linked Service_ for the connection of this source dataset which is 's
 
 __Click__ on '+ [add new factory resource]' button and click 'Dataset' to create destination dataset
 
-![13](./images/01.13.png)
-
 __Search__ 'Blob' and click. And click 'Finish' to configure a destination dataset
 
 __Type__ name 'blob_churn_csv' for the destination dataset
+
+![13](./images/01.13.png)
 
 __Click__ on _Connection_ tab to configure _Linked Service_ for the connection of destination dataset which is 'dst_blob_datalake'
 
