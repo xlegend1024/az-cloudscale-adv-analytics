@@ -128,7 +128,7 @@ az sql db import -s $sqlsvrName -n $sqldbName -g $rgName -p $sqlpwd -u $sqladm -
 echo "10. Create Azure Key Vault"
 az keyvault create --name $avkName --resource-group $rgName --location $loc
 
-sqldbconn="\"Server=tcp:"$sqlsvrName".database.windows.net,1433;Database=wwimdb;User ID=sqladmin;Password="$sqlpwd";Encrypt=true;Connection Timeout=30;\""
+sqldbconn='Server=tcp:'$sqlsvrName'.database.windows.net,1433;Database=wwimdb;User ID=sqladmin;Password='$sqlpwd';Encrypt=true;Connection Timeout=30;'
 
 az keyvault secret set --vault-name $avkName --name 'dev-sqldbconn' --value '$sqldbconn'
 
@@ -141,3 +141,4 @@ echo "SQL Server:" $sqlsvrName
 echo "SQL Database:" $sqladm
 echo "Your Resource Group Name is: " $rgName
 echo "You SQL DB Password is:      " $sqlpwd
+echo $sqldbconn
