@@ -6,25 +6,59 @@
 
 Create a service from here [Azure Portal #Create ML Studio](https://ms.portal.azure.com/#create/Microsoft.MachineLearningWorkspace) for lab.
 
+Reference following table to create the service
+
+|Name|Value|
+|---|---|
+|workspace Name|azhol###|
+|Subscription|_yoursubscription_|
+|Resource Group|azhol-###-rg|
+|Localtion|South Central US|
+|Storage Account|'Create new' , azhol###storage|
+|Workspace pricing tier|Standard|
+|Web service plan|'create new', azhol###Plan|
+
+![CreateMLStudio](./images/03.01.png)
+
+Once you fill out the from, __create__ by clicking button 'Create'
+
+> __Pin__ the service to access the service easy
+> ![CreateMLStudio](./images/03.02.png)
+
+## 2. Access ML Studio
+
 Open a new browser or tap and go to [Azure ML Studio](https://studio.azureml.net)
 
-__Click__ on sign in, if you are already loged in on Azure Portal, it'll automatically 
+__Click__ on sign in, if you are already loged in on Azure Portal, it'll automatically
 
-## 2. Start an experiment
+When you logged in to the service, please make sure your workspace name is correct or not
 
-Check your workspabce name on the top right conner on your screen
+![WorkspaceName](./images/03.03.png)
+
+## 3. Create a new experiment
 
 __Click__ '+ NEW' and __click__ 'Blank Experiment'
 
-### 2.1. Imoprt dataset
+![newexp](./images/03.04.png)
 
-### 2.2 Understand data
 
-### 2.3. Split data
+### 3.1. Rename experiment
 
-### 2.4. Train
+__Click__ on the title of the experiment, and name it as _azhol###_
 
-### 2.5. Select a Model
+### 3.2. Imoprt dataset
+
+__Search__ _import_ from the left search box and __drag and drop__ the import module to canvas
+
+![import](./images/03.06.png)
+
+### 3.3. Understand data
+
+### 3.4. Split data
+
+### 3.5. Train
+
+### 3.6. Select a Model
 
 
 ---
