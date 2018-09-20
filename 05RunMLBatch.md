@@ -8,9 +8,24 @@ Go to [Azure Portal](https://azure.portal.com) for lab.
 
 ## 1. Open ADF 'Author & Monitor'
 
-### 1.1 Create Connection
+## 2. Create Connection
 
-### 1.2 Create Dataset
+![new connection](./images/05.01.png)
+
+![new connection](./images/05.02.png)
+
+![new connection](./images/05.03.png)
+
+![new connection](./images/05.04.png)
+
+![new connection](./images/05.05.png)
+
+![new connection](./images/05.06.png)
+
+
+## 3. Create Dataset
+
+![new connection](./images/05.08.png)
 
 ```sql
 SELECT 
@@ -41,9 +56,23 @@ avgcallduration
 FROM tblCustomers
 ```
 
+![new connection](./images/05.08.01.png)
+
 customer_stg
 
 stage/sqldb_tblcustomers.csv
+
+![new connection](./images/05.08.02.png)
+
+![new connection](./images/05.09.png)
+
+![new connection](./images/05.10.png)
+
+![new connection](./images/05.11.png)
+
+![new connection](./images/05.12.png)
+
+![new connection](./images/05.13.png)
 
 ---
 [Next > 99. Clean Up](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/99Cleanup.md)
