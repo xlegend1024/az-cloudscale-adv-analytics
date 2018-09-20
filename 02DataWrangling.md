@@ -25,11 +25,11 @@ __Select__ 'Premium (+Role-based access controls)' for Pricing Tier
 
 > __Pin__ Azure Databricks on your Azure Portal dashboard
 
-## 2. Create Azure Databricks cluster
+## 2. Create Azure Databricks cluster (10 mins)
 
 __Open__ your Azure Databricks workspace or open [Azure Databricks](https://westus.azuredatabricks.net/) from your browser
 
-__Click__ 'Cluster' icon on the left panel of screen 
+__Click__ 'Cluster' icon on the left panel of screen
 
 __Click__ '+ Create Cluster' and fill out the form like following
 
@@ -73,14 +73,21 @@ __Click__ 'Detached' menu and then __Select__ your cluster on the list.
 
 ### 3.2. Update widget parameters for the lab
 
+Find blob strage account name and key and then update Notebook parameters
+
+![importnotebook](./images/02.05.png)
+
 ### 3.3 Run command from the notebook
 
-Run differen languages (Python, Scala, R, SQL) to load data from blob to databricks
-Data wrangling
+Run differen languages (Python, Scala, R, SQL) to load data from blob to Databricks Data wrangling
 
 ### 3.4 Save final training dataset to blob
 
+Run the commnad from Notebook on Databricks
+
 ### 3.5 (optional) Run Machine Learning in Databricks
+
+Optionaly we can run Machine Learning in Databricks
 
 ---
 [Next > 03. Modeling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/03Modeling.md)

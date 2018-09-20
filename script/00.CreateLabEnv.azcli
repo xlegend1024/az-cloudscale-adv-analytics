@@ -71,7 +71,7 @@ az group create --name $rgName --location $loc --tags $myTags
 # Storage Account
 # Create the Storage Account
 echo "2. Create Blob " $blobName
-az storage account create --name $blobName --resource-group $rgName --sku Standard_LRS --location $loc --tags $myTags
+az storage account create --name $blobName --resource-group $rgName --sku Standard_LRS --location $loc --kind StorageV2 --tags $myTags
 
 # Get blob connection string 
 blobConn=$(az storage account show-connection-string --name $blobName --resource-group $rgName --output tsv)
