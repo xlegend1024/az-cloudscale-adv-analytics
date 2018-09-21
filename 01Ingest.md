@@ -47,6 +47,8 @@ __Open__ the Data Factory and __click__ on _Author&Monitor_ link form the blades
 
 ### 2.1. Create Connections
 
+![linked services](./images/01.00.02.png)
+
 __Click__ on _Author_  and then __click__ _Connections_ at the bottom of the screen
 
 ![04](./images/01.04.png)
@@ -71,10 +73,14 @@ __Click__ 'Finish'
 
 ![06](./images/01.06.png)
 
+Next you need to create _Linked Service_ for destination
+
+![linked services](./images/01.00.03.png)
+
 Add new _Linked services_ for Azure blob which will be used for store source data
 __click__ on _+ NEW_ and search Blob
 
-![06](./images/01.06.png)
+![06](./images/01.07.png)
 
 __Create__ connection for destination, name it as 'dst_blob_datalake'
 
@@ -82,7 +88,11 @@ __Create__ connection for destination, name it as 'dst_blob_datalake'
 
 ### 2.2. Create Datasets
 
-2.2.1. Create Source dataset 
+2.2.1. Create Source dataset
+
+You have connection information to services and now you can define dataset on source storage
+
+![source dataset](./images/01.00.04.png)
 
 __Click__ on '+ [add new factory resource]' button and click 'Dataset' to create source dataset
 
@@ -103,6 +113,8 @@ Configure _Linked Service_ for the connection of this source dataset which is 's
 ![12](./images/01.12.png)
 
 2.2.2. Create Destination dataset
+
+![source dataset](./images/01.00.05.png)
 
 __Click__ on '+ [add new factory resource]' button and click 'Dataset' to create destination dataset
 
@@ -126,6 +138,10 @@ __Check__ on 'Column names in the first row' check box
 
 ### 2.3. Create Pipeline
 
+2.3.1. Create Pipeline
+
+![source dataset](./images/01.00.06.png)
+
 To __Create__ a new pipeline, __click__ on '+ [add new factory resource]' and then __click__ 'Pipeline'
 
 ![16](./images/01.16.png)
@@ -133,6 +149,10 @@ To __Create__ a new pipeline, __click__ on '+ [add new factory resource]' and th
 Name the pipeline as 'copy_churn_web__blob'
 
 ![17](./images/01.17.png)
+
+2.3.2. Create Activity 
+
+![source dataset](./images/01.00.01.png)
 
 __Drag and drop__ 'Copy Data' module from 'Move & Transform activity section to canvas
 
