@@ -52,9 +52,9 @@ Let's go back to ADF authoring tool and continut the configuration
 
 ## 2.2. Create SQL DB Table dataset
 
-Create a new dataset for sql db table which has customer information in SQL Database
+Create a new Azure Data Factory dataset for sql db table that has customer information in SQL Database
 
-Drag and drop 'Copy Data' module form the left panel
+__Drag and drop__ 'Copy Data' module form the left panel
 
 __Select__ _'Source'_ tab and __select__ 'tblcustomer' srouce dataset
 
@@ -88,32 +88,58 @@ totalcallduration,
 avgcallduration
 FROM tblCustomers
 ```
+
 ![new connection](./images/05.08.png)
 
-## 2.3. Create SQL DB Table dataset
+## 2.3. Create Blob CSV dataset
 
-__Click__ _'Sink'_ tab and __click__ '+ new' to __create__ a new destination dataset to save data from sql db
+__Click__ _'Sink'_ tab and __click__ '+ new' to __create__ a new destination dataset to save data in Azure blob
 
 __Search__ _'blob'_ and __click__ _'finish'_
 
 ![new connection](./images/05.08.01.png)
 
-Name the blob dataset as 'customer_stg', click 'connection' tab and select 'dst_blob_datalake' and then __type__ _stage_ for container and _sqldb_tblcustomers.csv_ for file name
-customer_stg
+Name the blob dataset as 'customer_stg', click 'connection' tab and select 'dst_blob_datalake' which is existing and then __type__ _stage_ for container and _sqldb_tblcustomers.csv_ for the file name
 
 ![new connection](./images/05.08.02.png)
 
+## 2.4. Create Azure ML Connection
 
+Next step is ML Batch Execution activity
+
+__Drag and Drop__ _'ML Batch Execution Activity'_ module to canvas
+
+![new connection](./images/05.08.03.png)
+
+Click 'Azure ML' tab of the _'ML Batch Execution Activity'_ module and click _'+ New'_ to create new _'AML linked service'_
+
+![new connection](./images/05.08.05.png)
+
+You need Azure ML web service endpoint and API Key to access to it. You can get both web service endpint and API Key from [Azure ML Studio Web Service Management page](https://studio.azureml.net/)
 
 ![new connection](./images/05.09.png)
 
-![new connection](./images/05.10.png)
+When you filled out the endpoint and API key, go to '_Setting_' tab of _ML Batch Execution module_
+
+Type input key name, input storage linked service and path of the file
+
+|Input Key Name|Linked Service|Path|
+|---|---|---|
+|input1|dst_blob_datalake|stage/sqldb_tblcustomers.csv|
+
+And also type output key name, output storage linked service and path where the result file will be stored after the scoreing
+
+|Ouput Key Name|Linked Service|Path|
+|---|---|---|
+|input1|dst_blob_datalake|result/churncustomers.csv|
 
 ![new connection](./images/05.11.png)
 
-![new connection](./images/05.12.png)
+Create connection by drag the output from Copy Data module drop to ML Batch Execution moudle
 
 ![new connection](./images/05.13.png)
+
+Lastly start the job, by triggering pipeline and then go to your blob storage to see the result of ML Batch Execution
 
 ---
 [Next > 99. Clean Up](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/99Cleanup.md)
