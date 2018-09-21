@@ -2,6 +2,10 @@
 
 ## Architecture
 
+Now you deployed your score model as a web service. You can build your custom application that consum the score model. In this lab, you will export new customer data from SQL DB and use your score model to predict your customer churn.
+
+![arch05](./images/arch05.png)
+
 ## 0. Access to Azure Portal
 
 Go to [Azure Portal](https://azure.portal.com) for lab.

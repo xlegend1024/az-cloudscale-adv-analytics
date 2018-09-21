@@ -2,6 +2,15 @@
 
 ## Architecture
 
+After the data preperation on Azure Databricks, it is time to build a machine learning model to prediect customer chrun. In this lab, we'll use Azure Machine Learning Studio for training and modeling.
+
+* Azure Machine Learning Studio
+* How to understand data
+* Understand traning algorithm
+* Traing models and select the best model
+
+![03](./images/arch03.png)
+
 ## 1. Create Azure Machine Learning Studio
 
 Create a service from here [Azure Portal #Create ML Studio](https://ms.portal.azure.com/#create/Microsoft.MachineLearningWorkspace) for lab.

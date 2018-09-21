@@ -2,6 +2,12 @@
 
 ## Architecture
 
+When you conduct multple experiments, you will find the most appropreate model for your buiness. And after the model selection, you need to make the score model as a service to use for your business. In this lab, we'll create a web service to expose your score model.
+
+* Deploy a Web Service 
+
+![arch04](./images/arch04.png)
+
 ## 0. Access to AZ ML Studio
 
 Open a new browser or tap and go to [Azure ML Studio](https://studio.azureml.net)
@@ -28,7 +34,7 @@ __Click__ _'WITH RULES'_ and choose _'ALL COLUMNS'_, _'Exclude'_ and type _'chur
 
 'Run' the experiment
 
-## 1. Create and deploy web service
+## 2. Create and deploy web service
 
 Click 'Deploy Web Service [Classic]' to deploy a service
 
@@ -36,7 +42,7 @@ Click 'Deploy Web Service [Classic]' to deploy a service
 
 ![deploy](./images/04.03.png)
 
-## 4. Download a sample excel and test
+## 3. Download a sample excel and test
 
 When deployment is done, you can download sample excel file to test your web service
 

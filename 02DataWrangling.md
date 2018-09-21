@@ -5,7 +5,7 @@
 In this lab, we'll use Databricks to wrangle data in the blob storage
 Before you follow the steps, please make sure concept of ADF
 
-* Mount the blob storage to Databricks 
+* Mount the blob storage to Databricks
 * Python
 * Dataframe
 
@@ -87,7 +87,7 @@ Run differen languages (Python, Scala, R, SQL) to load data from blob to Databri
 
 Run the commnad from Notebook on Databricks
 
-### 3.5 (optional) Run Machine Learning in Databricks
+### _3.5 (optional) Run Machine Learning in Databricks_
 
 Optionaly we can run Machine Learning in Databricks
 
