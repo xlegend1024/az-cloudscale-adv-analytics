@@ -72,9 +72,9 @@ In order to get save url to access to the dataset, you need to create a SAS url 
 
 Go to your blob storage account and go to container _'ingest'_
 
-> Follow menu from the blob blade, _Blob Service > Blobs > inget > azmlstudio.csv_
+> Follow menu from the blob blade, _Blob Service > Blobs > inget > azmlstudio_
 
-To generate SAS, click on the file _'azmlstudio.csv'_, _'Generate SAS'_, _'Generate blob SAS token and URL'_ and then click on _'copy icon'_ at the bottom of the screen
+To generate SAS, click on the file _'part-00000-tid....csv'_, _'Generate SAS'_, _'Generate blob SAS token and URL'_ and then click on _'copy icon'_ at the bottom of the screen
 
 ![searchblob](./images/03.05.02.png)
 

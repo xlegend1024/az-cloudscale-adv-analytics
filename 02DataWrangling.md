@@ -51,7 +51,7 @@ __Click__ '+ Create Cluster' and fill out the form like following
 
 ## 3. Interact with data via Notebook
 
-### 3.1 Import from notebook
+### 3.1 Import notebook
 
 __Click__ 'Workspace' on Azure Databricks Portal
 
