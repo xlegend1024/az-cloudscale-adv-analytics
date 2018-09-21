@@ -26,6 +26,8 @@ When running is done your screen will look like following
 
 Delete connection between _'Import Data'_ module and _'Score Model'_ module
 
+![running](./images/04.02.00.png)
+
 __Add__ _'Select Columns in Dataset'_ module to canvas and __click__ _'Lanch column selector'_ to filter a column
 
 __Click__ _'WITH RULES'_ and choose _'ALL COLUMNS'_, _'Exclude'_ and type _'churn'_
