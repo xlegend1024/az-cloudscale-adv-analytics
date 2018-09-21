@@ -123,6 +123,10 @@ You need Azure ML web service endpoint and API Key to access to it. You can get 
 
 ![new connection](./images/05.09.png)
 
+When you click on '_BATCH EXECUTION_' in the API HELP PAGE, you can find API URL
+
+![new connection](./images/05.09.01.png)
+
 When you filled out the endpoint and API key, go to '_Setting_' tab of _ML Batch Execution module_
 
 Type input key name, input storage linked service and path of the file
