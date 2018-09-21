@@ -13,6 +13,7 @@ az group delete -g <yourresourcegrupname>
 ```
 
 Thanks,
+
 Hyunsuk Shin
 
 ---
