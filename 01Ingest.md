@@ -13,6 +13,10 @@ Before you follow the steps, please make sure concept of ADF
 
 ![01](./images/arch01.png)
 
+## Azure Data Factory Concept
+
+![01](./images/01.00.01.png)
+
 ## 0. Access to Azure Portal
 
 Go to [Azure Portal](https://azure.portal.com) for this lab
