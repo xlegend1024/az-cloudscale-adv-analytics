@@ -9,6 +9,8 @@ Before you follow the steps, please make sure concept of ADF
 * Python
 * Dataframe
 
+![02](./images/arch02.png)
+
 ## 1. Create Azure Databricks
 
 Create a service from here [Azure Portal #Create Azure Databricks](https://ms.portal.azure.com/#create/Microsoft.Databricks) to create Azure Databricks

@@ -11,6 +11,8 @@ Before you follow the steps, please make sure concept of ADF
 * Activites
 * Pipeline
 
+![01](./images/arch01.png)
+
 ## 0. Access to Azure Portal
 
 Go to [Azure Portal](https://azure.portal.com) for this lab
