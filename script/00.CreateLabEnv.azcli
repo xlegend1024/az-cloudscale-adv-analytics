@@ -36,6 +36,19 @@ else
     exit
 fi
 
+echo ""
+az account list-locations --output table --query []['name','displayName']
+echo "Type location for the lab"
+read -p "Location >>" loc
+
+# set azure region
+if [ ! -z "$loc" ]; then
+    echo "You set location" $loc " for the lab."
+else
+    echo "Default location is West US 2"
+    loc=westus2
+fi
+
 # 3. get subscruption ID
 subId=$(az account show --output tsv --query [id])
 sleep 1
@@ -46,8 +59,6 @@ sleep 1
 # if you have exsiting one please use the one
 num=$(shuf -i0-1000 -n1)
 rgName=azhol-$num-rg #Save it as ps1
-# set azure region
-loc=westus
 # set blob name that should be unique 
 blobName=blobdev$num # It will be saved it in parameter file
 # set container name that will be created in Blob
