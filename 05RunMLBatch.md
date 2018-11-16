@@ -111,6 +111,8 @@ Name the blob dataset as 'customer_stg', click 'connection' tab and select 'dst_
 
 ![new connection](./images/05.08.02.png)
 
+> __Make sure check header in first row__
+
 ## 2.4. Create Azure ML Connection
 
 Next step is ML Batch Execution activity
