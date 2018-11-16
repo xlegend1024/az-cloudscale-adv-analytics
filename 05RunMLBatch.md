@@ -30,6 +30,10 @@ __Select__ 'Source' tab from the module and then __click__ _'+ New'_ to create n
 
 Search 'azure sql' from the New Linked Service window and select it and then click 'Finish' 
 
+```
+Server=tcp:dev658.database.windows.net,1433;Initial Catalog=wwimdb;Persist Security Info=False;User ID=sqladmin;Password=1q2w3e4r5t^Y;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+```
+
 ![new connection](./images/05.01.png)
 
 Since there is no database connection string information in your ADF, you need to give the connection string to ADF which is in your Azure Key Vault
