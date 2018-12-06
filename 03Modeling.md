@@ -135,7 +135,6 @@ And the label is 'Churn' since we are trying to build a machine learning to pred
 
 ![import](./images/03.11.png)
 
-
 ---
 [Next > 04. Operationalization](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/04Operationalization.md)
 

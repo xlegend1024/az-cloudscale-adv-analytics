@@ -135,6 +135,12 @@ When you click on '_BATCH EXECUTION_' in the API HELP PAGE, you can find API URL
 
 When you filled out the endpoint and API key, go to '_Setting_' tab of _ML Batch Execution module_
 
+> if you don't have AML Studio you can you following information
+> |URL|Key|
+> |---|---|
+> |```https://ussouthcentral.services.azureml.net/workspaces/f82854d8c1ba44a08f0877bc5293add2/services/79287ac25d73421c8c502a1813b8fb96/jobs?api-version=2.0```|9CKIPC5bPuklYRsHaVXQbtsemoo5TiCsVg9qK2PrMMk/m252mZVM6aPVlR4wBk6FzTiyJyu+VdEEFnD13D9+wA==|
+
+
 Type input key name, input storage linked service and path of the file
 
 |Input Key Name|Linked Service|Path|
