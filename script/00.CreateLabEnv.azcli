@@ -58,13 +58,13 @@ sleep 1
 # set resource group name
 # if you have exsiting one please use the one
 num=$(shuf -i0-1000 -n1)
-rgName=azhol-$num-rg #Save it as ps1
+rgName=azlab-$num-rg #Save it as ps1
 # set blob name that should be unique 
-blobName=blobdev$num # It will be saved it in parameter file
+blobName=azlabblob$num # It will be saved it in parameter file
 # set container name that will be created in Blob
 containerName=sampledata
 # set SQL Server (Instance) name
-sqlsvrName=dev$num # It will be saved it in parameter file
+sqlsvrName=azlabsql$num # It will be saved it in parameter file
 # Azure Key Vault Name
 avkName=akv$num
 # DO NOT CHANGE!!!
