@@ -35,7 +35,7 @@ Extract data from a web and load the data to Azure Blob storage. Mount the Azure
 
 1. Create Data Pipeline
 
-### [Lab 02. Create Azure Databricks](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
+### [Lab 02. Data wrangling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
 
 1. Create Azure Databricks
 
@@ -43,23 +43,31 @@ Extract data from a web and load the data to Azure Blob storage. Mount the Azure
 
 1. Import and Run Notebook
 
-### [Lab 03. Data Wrangling and Training](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/06 - MLlib Classification Training.ipynb)
+### [Lab 03. Modeling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/03Modeling.md)
 
-1. Run Notebooks
+1. Create Azure Machine Learning Studio
 
-### [Lab 04. Operationalize score model](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/07- MLlib Classification Deployment.ipynb)
+1. Create workspace
 
+### [Lab 04. Operationalize score model](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/04Operationalization.md)
 
-### [Lab 05. Run Notebook within Data Pipeline](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/05RunMLBatch.md)
+1. Create web service
+
+1. Update inputs
+
+1. Publish web service
+
+1. Download a sample excel and test
+
+### [Lab 05. Run](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/05RunMLBatch.md)
 
 1. Create a new pipeline for batch ml processing
 
 ---
-[Start Lab > 01. Ingest Data](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/00.SetupEnv.md)
+[Start Lab > 01. Ingest Data](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/01Ingest.md)
 
 ---
 
 ## Sources and references
 * https://docs.microsoft.com/en-us/azure/machine-learning/studio/azure-ml-customer-churn-scenario
 * https://github.com/Azure/MachineLearningSamples-ChurnPrediction 
-* https://github.com/jakazmie/ADBLabs
