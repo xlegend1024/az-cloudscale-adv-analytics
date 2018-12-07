@@ -62,7 +62,7 @@ __Click__ 'Users', __click__ on little icon next to user name and then __click__
 __Select__ 'URL', __Copy__ below url and __paste__ it to import window
 
 ```html
-https://raw.githubusercontent.com/xlegend1024/az-cloudscale-adv-analytics/master/AzureDatabricks/02.datawrangling.ipynb
+https://github.com/jakazmie/ADBLabs/blob/master/ADBLabs.dbc
 ```
 
 ![importnotebook](./images/02.03.png)
@@ -79,20 +79,15 @@ Find blob strage account name and key and then update Notebook parameters
 
 ![importnotebook](./images/02.05.png)
 
-### 3.3 Run command from the notebook
+### 3.3 Data Wrangling and Training
 
-Run differen languages (Python, Scala, R, SQL) to load data from blob to Databricks Data wrangling
+Open Notebook 06 - MLlib Classification Training 
 
-### 3.4 Save final training dataset to blob
+### 3.4 Deploy Model to ACI 
 
-Run the commnad from Notebook on Databricks
-
-### _3.5 (optional) Run Machine Learning in Databricks_
-
-Optionaly we can run Machine Learning in Databricks
+Open Notebook 07- MLlib Classification Deploymen
 
 ---
-[Next > 03. Modeling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/03Modeling.md)
 
 ---
 [Main](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/README.md)

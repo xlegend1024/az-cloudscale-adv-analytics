@@ -7,7 +7,6 @@ In this hands on lab, you can understand how to apply following Azure services t
 * Azure Data Factory
 * Azure Databricks
 * Azure SQL Database
-* Azure ML Studio
 * Azure Key Vault
 
 After the workshop you will be able to:
@@ -20,7 +19,7 @@ After the workshop you will be able to:
 
 ## Architecture
 
-![overallarch](./images/arch99.png)
+![overallarch](./images/arch99.01.png)
 
 ## Scenario
 
