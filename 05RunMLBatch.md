@@ -137,7 +137,7 @@ When you filled out the endpoint and API key, go to '_Setting_' tab of _ML Batch
 
 |URL|Key|
 |---|---|
-|```https://ussouthcentral.services.azureml.net/workspaces/f82854d8c1ba44a08f0877bc5293add2/services/79287ac25d73421c8c502a1813b8fb96/jobs?api-version=2.0```|9CKIPC5bPuklYRsHaVXQbtsemoo5TiCsVg9qK2PrMMk/m252mZVM6aPVlR4wBk6FzTiyJyu+VdEEFnD13D9+wA==|
+|```https://ussouthcentral.services.azureml.net/workspaces/10d9952bf79a41718719949a08adcadd/services/d05864830bd84ce391506779ecaf74d2/jobs?api-version=2.0```|Ly6s++j1x3kUFGp7btRtKBsHhcIvmKNaXoSoWj9+ntk7usjwbV3DMgLcGH7Ou2IklTZk+B06bGgMX7pjHATV7w==|
 
 > 
 
