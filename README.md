@@ -43,12 +43,11 @@ Extract data from a web and load the data to Azure Blob storage. Mount the Azure
 
 1. Import and Run Notebook
 
-### [Lab 03. Data Wrangling and Training](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/06 - MLlib Classification Training.ipynb)
+### [Lab 03. Data Wrangling and Training](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/06_MLlib_Classification_Training.ipynb)
 
 1. Run Notebooks
 
-### [Lab 04. Operationalize score model](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/07- MLlib Classification Deployment.ipynb)
-
+### [Lab 04. Operationalize score model](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/07_MLlib_Classification_Deployment.ipynb)
 
 ### [Lab 05. Run Notebook within Data Pipeline](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/05RunMLBatch.md)
 
