@@ -19,7 +19,7 @@ After the workshop you will be able to:
 
 ## Architecture
 
-![overallarch](./images/arch99.01.png)
+![overallarch](./images/arch99.png)
 
 ## Scenario
 
@@ -42,6 +42,8 @@ Extract data from a web and load the data to Azure Blob storage. Mount the Azure
 1. Create Azure Databricks cluster
 
 1. Import and Run Notebook
+
+## Citizenship Data Scientist
 
 ### [Lab 03. Modeling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/03Modeling.md)
 
