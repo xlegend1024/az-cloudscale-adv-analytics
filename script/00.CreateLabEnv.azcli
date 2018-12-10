@@ -25,16 +25,9 @@ else
 fi
 
 # Set a parameter that will be used for password 
+sqlpwd=1q2w3e4r5t^Y
 echo ""
-echo "Type Passowrd for the lab"
-read -p "e.g.) 1q2w3e4r5t^Y >>" sqlpwd
-
-if [ ! -z "$sqlpwd" ]; then
-    echo "You set password" $sqlpwd " for the lab."
-else
-    echo "Please run the script again!!"
-    exit
-fi
+echo "Type Passowrd for the lab" $sqlpwd
 
 echo ""
 az account list-locations --output table --query []['name','displayName']
@@ -50,12 +43,6 @@ else
 fi
 
 # 3. get subscruption ID
-subId=$(az account show --output tsv --query [id])
-sleep 1
-# get tenant ID 
-tenantId=$(az account show --output tsv --query [tenantId])
-sleep 1
-# set resource group name
 # if you have exsiting one please use the one
 num=$(shuf -i0-1000 -n1)
 rgName=azlab-$num-rg #Save it as ps1
@@ -71,21 +58,20 @@ avkName=akv$num
 sqldbName=wwimdb
 # DO NOT CHANGE!!!
 sqladm=sqladmin
-# Tag you can add or remove
-myTags="Env=HandsonLab"
 
 # Create the Resource Group
 # if you have exsiting one you can skip this part
 echo "1. Create Resource Group " $rgName
-az group create --name $rgName --location $loc --tags $myTags
+az group create --name $rgName --location $loc 
 
 # Storage Account
 # Create the Storage Account
 echo "2. Create Blob " $blobName
-az storage account create --name $blobName --resource-group $rgName --sku Standard_LRS --location $loc --kind StorageV2 --tags $myTags
+az storage account create --name $blobName --resource-group $rgName --sku Standard_LRS --location $loc --kind StorageV2 
 
 # Get blob connection string 
 blobConn=$(az storage account show-connection-string --name $blobName --resource-group $rgName --output tsv)
+blobkey1=$(az storage account keys list -n $blobName -g $rgName --output tsv --query [0].value)
 
 # Create a container
 echo "3. Create container in the blob" $containerName 
@@ -124,6 +110,7 @@ az sql db create --name $sqldbName --resource-group $rgName --server $sqlsvrName
 bloburi="https://$blobName.blob.core.windows.net/$containerName/$objName"
 time=2020-01-01T00:00:00Z
 sas=$(az storage blob generate-sas --account-name $blobName --container-name $containerName --name $objName --permissions r --expiry $time --output tsv)
+
 # Restore SQL DB 
 echo "9. Restore DB"
 az sql db import -s $sqlsvrName -n $sqldbName -g $rgName -p $sqlpwd -u $sqladm --storage-key $sas --storage-key-type SharedAccessKey --storage-uri $bloburi
@@ -139,17 +126,18 @@ az sql db import -s $sqlsvrName -n $sqldbName -g $rgName -p $sqlpwd -u $sqladm -
 echo "10. Create Azure Key Vault"
 az keyvault create --name $avkName --resource-group $rgName --location $loc
 
-sqldbconn='"Server=tcp:'$sqlsvrName'.database.windows.net,1433;Database=wwimdb;User ID=sqladmin;Password='$sqlpwd';Encrypt=true;Connection Timeout=30;"'
+sqldbconn='Server=tcp:'$sqlsvrName'.database.windows.net,1433;Database=wwimdb;User ID=sqladmin@;Password='$sqlpwd';Encrypt=true;Connection Timeout=30;'
 
 az keyvault secret set --vault-name $avkName --name 'dev-sqldbconn' --value '$sqldbconn'
 
-echo "SubscriptionID: " $subId
-echo "Tenant ID:" $tenantId
-echo "Location:" $loc
-echo "Blob:" $blobName
-echo "Conatiner:" $containerName
-echo "SQL Server:" $sqlsvrName
-echo "SQL Database:" $sqladm
-echo "Your Resource Group Name is: " $rgName
-echo "You SQL DB Password is:      " $sqlpwd
+echo "SubscriptionID:   " $subId
+echo "Tenant ID:        " $tenantId
+echo "Location:         " $loc
+echo "Blob:             " $blobName
+echo "Blob Key:         " $blobkey1
+echo "Conatiner:        " $containerName
+echo "SQL Server:       " $sqlsvrName
+echo "SQL Database:     " $sqladm
+echo "Resource Group:   " $rgName
+echo "SQL DB Password:  " $sqlpwd
 echo $sqldbconn
