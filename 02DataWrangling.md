@@ -61,8 +61,20 @@ __Click__ 'Users', __click__ on little icon next to user name and then __click__
 
 __Select__ 'URL', __Copy__ below url and __paste__ it to import window
 
+## Contents for Data Scientist
+
+> If you know concept of Data Scientist and Python please use following.
+
 ```html
-https://github.com/jakazmie/ADBLabs/blob/master/ADBLabs.dbc
+https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/azlab.dbc
+```
+
+## Contents for Citizenship Data Scientist
+
+> If you are new to Data Scientist and not comportable with Python please use following
+
+```html
+https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/02.datawrangling.ipynb
 ```
 
 ![importnotebook](./images/02.03.png)

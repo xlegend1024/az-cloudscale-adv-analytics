@@ -98,9 +98,6 @@ Chage some options in the properties on the left panel
 
 __Click__ _'Run'_ button in the bottom of the canvas, then it will download the dataset from blob to Azure ML Studio in a  minute (around 10 sec)
 
-```
-https://blobdev658.blob.core.windows.net/ingest/azmlstudio/part-00000-tid-6964184341088990766-c5f7a4e4-bc4f-4f19-bdb3-faafc7b26efb-20-c000.csv
-```
 
 ### 3.3. Understand data
 
