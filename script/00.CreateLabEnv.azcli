@@ -102,6 +102,7 @@ az sql server create --admin-user $sqladm --admin-password $sqlpwd --location $l
 # Opening all IP address is for this demo and lab only
 echo "7. Update SQL Server Firewall"
 az sql server firewall-rule create -n openall --start-ip-address 1.1.1.1 --end-ip-addres 255.255.255.255 -g $rgName -s $sqlsvrName
+az sql server firewall-rule create -g $rgName -s $sqlsvrName -n allowazure --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
 
 # Create a SQL DB
 echo "8. Create a SQL DB " $sqldbName
