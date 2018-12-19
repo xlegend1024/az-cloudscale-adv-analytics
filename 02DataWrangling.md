@@ -83,8 +83,6 @@ __Click__ 'Import' button, then the notebook will automatically open on your bro
 
 __Click__ 'Detached' menu and then __Select__ your cluster on the list.
 
-![importnotebook](./images/02.04.png)
-
 ### 3.2. Update widget parameters for the lab
 
 Find blob strage account name and key and then update Notebook parameters
