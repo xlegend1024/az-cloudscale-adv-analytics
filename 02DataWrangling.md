@@ -37,7 +37,7 @@ __Click__ '+ Create Cluster' and fill out the form like following
 
 |Name|Value|
 |---|---|
-|Cluster Name|azhol92|
+|Cluster Name|azlab###|
 |Cluster Mode|Standard Mode|
 |Databricks Runtime Ver.|4.2.|
 |Python Ver.|3|
