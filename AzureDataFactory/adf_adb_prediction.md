@@ -48,6 +48,14 @@ Kepp your token safe
 
 Download ARM template to import ADF pipeline
 
+You need folling information
+
+|Key|Value|
+|---|---|
+|Resource Group Name||
+|ADF Name||
+|ADB Token||
+
 2.3 Update parameters and pipeline
 
 |Name|value|
