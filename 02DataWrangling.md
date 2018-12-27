@@ -15,7 +15,7 @@ Before you follow the steps, please make sure concept of ADF
 
 Create a service from here [Azure Portal #Create Azure Databricks](https://ms.portal.azure.com/#create/Microsoft.Databricks) to create Azure Databricks
 
-__Type__ Azure Databricks workspace name, e.g.) azhol92
+__Type__ Azure Databricks workspace name, e.g.) azlab###adb
 
 __Select__ appropreate Azure subscription
 
