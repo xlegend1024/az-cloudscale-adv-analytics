@@ -47,9 +47,23 @@ Extract data from a web and load the data to Azure Blob storage. Mount the Azure
 
 ### [Lab 03. Data Wrangling and Training](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/06_MLlib_Classification_Training.ipynb)
 
-### [Lab 04. Run Notebook within Data Pipeline](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDataFactory/adf_adb_prediction.md)
+Import following url from Azure Databricks
 
-### [Lab 05. Operationalize score model](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/07_MLlib_Classification_Deployment.ipynb)
+```
+https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/06_MLlib_Classification_Training.ipynb
+```
+
+### [Lab 04. Run Notebook within ADF Pipeline](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDataFactory/adf_adb_prediction.md)
+
+Use Azure Data Factory for batch scoring
+
+### [Lab 05. Operationalize score model using Azure Machine Leaerning](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/07_MLlib_Classification_Deployment.ipynb)
+
+Import following url from Azure Databricks
+
+```
+https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/07_MLlib_Classification_Deployment.ipynb
+```
 
 ## Labs for __Citizenship Data Scientist__
 
