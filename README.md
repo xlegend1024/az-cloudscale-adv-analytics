@@ -19,7 +19,7 @@ After the workshop you will be able to:
 
 ## Architecture
 
-![overallarch](./images/arch99.01.png)
+![overallarch](./images/arch99.png)
 
 ## Scenario
 
@@ -35,7 +35,7 @@ Extract data from a web and load the data to Azure Blob storage. Mount the Azure
 
 1. Create Data Pipeline
 
-### [Lab 02. Create Azure Databricks](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
+### [Lab 02. Data wrangling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/02DataWrangling.md)
 
 1. Create Azure Databricks
 
@@ -43,29 +43,7 @@ Extract data from a web and load the data to Azure Blob storage. Mount the Azure
 
 1. Import and Run Notebook
 
-## Labs for __Data Scientist__
-
-### [Lab 03. Data Wrangling and Training](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/06_MLlib_Classification_Training.ipynb)
-
-Import following url from Azure Databricks
-
-```
-https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/06_MLlib_Classification_Training.ipynb
-```
-
-### [Lab 04. Run Notebook within ADF Pipeline](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDataFactory/adf_adb_prediction.md)
-
-Use Azure Data Factory for batch scoring
-
-### [Lab 05. Operationalize score model using Azure Machine Leaerning](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/07_MLlib_Classification_Deployment.ipynb)
-
-Import following url from Azure Databricks
-
-```
-https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/07_MLlib_Classification_Deployment.ipynb
-```
-
-## Labs for __Citizenship Data Scientist__
+## Citizenship Data Scientist
 
 ### [Lab 03. Modeling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/03Modeling.md)
 
@@ -87,13 +65,11 @@ https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureData
 
 1. Create a new pipeline for batch ml processing
 
-
 ---
-[Start Lab > 01. Ingest Data](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/00.SetupEnv.md)
+[Start Lab > 01. Ingest Data](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/01Ingest.md)
 
 ---
 
 ## Sources and references
 * https://docs.microsoft.com/en-us/azure/machine-learning/studio/azure-ml-customer-churn-scenario
 * https://github.com/Azure/MachineLearningSamples-ChurnPrediction 
-* https://github.com/jakazmie/ADBLabs
