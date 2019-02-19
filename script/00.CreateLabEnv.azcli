@@ -116,29 +116,28 @@ sas=$(az storage blob generate-sas --account-name $blobName --container-name $co
 echo "9. Restore DB"
 az sql db import -s $sqlsvrName -n $sqldbName -g $rgName -p $sqlpwd -u $sqladm --storage-key $sas --storage-key-type SharedAccessKey --storage-uri $bloburi
 
+#sqldbconn='Server=tcp:'$sqlsvrName'.database.windows.net,1433;Initial Catalog='$sqldbName';Persist Security Info=False;User ID=sqladmin@;Password='$sqlpwd';Encrypt=true;Connection Timeout=30;'
+sqldbconn=$(az sql db show-connection-string -s $sqlsvrName -n $sqldbName -c ado.net)
+sqldbconn=${_sqldbconn/<username>/$sqladm}
+sqldbconn=${_sqldbconn/<password>/$sqlpwd}  
+
 # Create keyvault
 ## Steps
+echo "Create Azure Key Vault"
+az keyvault create --name $akvName --resource-group $rgName --location $loc
 
-## 1. Retrieve data factory service identity by copying the value of "SERVICE IDENTITY APPLICATION ID" generated along with your factory. If you use ADF authoring UI, the service identity ID will be shown on the Azure Key Vault linked service creation window; you can also retrieve it from Azure portal, refer to Retrieve data factory service identity.
-## 2. Grant the service identity access to your Azure Key Vault. In your key vault -> Access policies -> Add new -> search this service identity application ID to grant Get permission in Secret permissions dropdown. It allows this designated factory to access secret in key vault.
-## 3. Create a linked service pointing to your Azure Key Vault. Refer to Azure Key Vault linked service.
-## 4. Create data store linked service, inside which reference the corresponding secret stored in key vault. Refer to reference secret stored in key vault.
+az keyvault secret set --vault-name $akvName --name 'dev-sqldbconn' --value $sqldbconn
+az keyvault secret set --vault-name $akvName --name 'dev-blobconn' --value $blobConn
 
-echo "10. Create Azure Key Vault"
-az keyvault create --name $avkName --resource-group $rgName --location $loc
+echo $(date +%F %H-%M-%S) >> ./azlab.txt
+echo "Resource Group:   " $rgName >> ./azlab.txt
+echo "Location:         " $loc >> ./azlab.txt
+echo "Blob:             " $blobName >> ./azlab.txt
+echo "Blob Key:         " $blobkey1 >> ./azlab.txt
+echo "SQL Server:       " $sqlsvrName >> ./azlab.txt
+echo "SQL Database:     " $sqladm >> ./azlab.txt
+echo "SQL DB Password:  " $sqlpwd >> ./azlab.txt
+echo "SQL DB Connection:" $sqldbconn >> ./azlab.txt
+echo "" >> ./azlab.txt
 
-sqldbconn='Server=tcp:'$sqlsvrName'.database.windows.net,1433;Database=wwimdb;User ID=sqladmin@;Password='$sqlpwd';Encrypt=true;Connection Timeout=30;'
-
-az keyvault secret set --vault-name $avkName --name 'dev-sqldbconn' --value '$sqldbconn'
-
-echo "SubscriptionID:   " $subId
-echo "Tenant ID:        " $tenantId
-echo "Location:         " $loc
-echo "Blob:             " $blobName
-echo "Blob Key:         " $blobkey1
-echo "Conatiner:        " $containerName
-echo "SQL Server:       " $sqlsvrName
-echo "SQL Database:     " $sqladm
-echo "Resource Group:   " $rgName
-echo "SQL DB Password:  " $sqlpwd
-echo $sqldbconn
+echo "Your lab environment information is saved as azlab.txt"
