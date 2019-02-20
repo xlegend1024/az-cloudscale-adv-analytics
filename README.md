@@ -50,7 +50,7 @@ Extract data from a web and load the data to Azure Blob storage. Mount the Azure
 Import following url from Azure Databricks
 
 ```
-https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/06_MLlib_Classification_Training.ipynb
+https://github.com/xlegend1024/az-adb-aml-lab/raw/master/databricks/az-adb-aml-lab.dbc
 ```
 
 ### [Lab 04. Run Notebook within ADF Pipeline](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDataFactory/adf_adb_prediction.md)
@@ -65,28 +65,14 @@ Import following url from Azure Databricks
 https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/AzureDatabricks/07_MLlib_Classification_Deployment.ipynb
 ```
 
-## Labs for __Citizenship Data Scientist__
+### Lab 06. Azure AutoML
+Import following url from Azure Databricks
 
-### [Lab 03. Modeling](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/03Modeling.md)
+```
+https://github.com/xlegend1024/az-adb-aml-lab/raw/master/databricks/az-adb-aml-lab.dbc
+```
 
-1. Create Azure Machine Learning Studio
-
-1. Create workspace
-
-### [Lab 04. Operationalize score model](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/04Operationalization.md)
-
-1. Create web service
-
-1. Update inputs
-
-1. Publish web service
-
-1. Download a sample excel and test
-
-### [Lab 05. Run](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/05RunMLBatch.md)
-
-1. Create a new pipeline for batch ml processing
-
+## [Labs for __Citizenship Data Scientist__](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/README_DE.md)
 
 ---
 [Start Lab > 01. Ingest Data](https://github.com/xlegend1024/az-cloudscale-adv-analytics/blob/master/00.SetupEnv.md)
