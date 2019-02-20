@@ -53,7 +53,7 @@ containerName=sampledata
 # set SQL Server (Instance) name
 sqlsvrName=azlabsql$num # It will be saved it in parameter file
 # Azure Key Vault Name
-avkName=akv$num
+akvName=akv$num
 # DO NOT CHANGE!!!
 sqldbName=wwimdb
 # DO NOT CHANGE!!!

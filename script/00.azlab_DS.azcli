@@ -1,0 +1,86 @@
+#!/bin/bash
+
+# Select Azure subscription
+az account list --output table
+
+echo "\n\r"
+
+read -p "Subscription Name for lab>>" subName
+
+if [ ! -z "$subName" ]; then
+    echo "You select " $subName " for the lab."
+    az account set --subscription "$subName" --verbose
+else
+    echo "Please run the script again!! EXIT"
+    exit
+fi
+
+chkName=$(az account list --output tsv --query "[?isDefault].name")
+
+if [ "$subName" = "$chkName" ]; then
+    echo "Subscripion Name has confirmed"
+else 
+    echo "Please try again with correct subscription name"
+    exit
+fi
+
+# Set a parameter that will be used for password 
+sqlpwd=1q2w3e4r5t^Y
+echo ""
+echo "Type Passowrd for the lab" $sqlpwd
+
+echo ""
+az account list-locations --output table --query []['name','displayName']
+echo "Type location for the lab"
+read -p "Location >>" loc
+
+# set azure region
+if [ ! -z "$loc" ]; then
+    echo "You set location" $loc " for the lab."
+else
+    echo "Default location is West US 2"
+    loc=westus2
+fi
+
+# 3. get subscruption ID
+# if you have exsiting one please use the one
+num=$(shuf -i0-1000 -n1)
+rgName=azlab-$num-rg #Save it as ps1
+# set blob name that should be unique 
+blobName=azlabblob$num # It will be saved it in parameter file
+# set container name that will be created in Blob
+containerName=sampledata
+# set SQL Server (Instance) name
+sqlsvrName=azlabsql$num # It will be saved it in parameter file
+# Azure Key Vault Name
+akvName=akv$num
+
+
+# Create the Resource Group
+# if you have exsiting one you can skip this part
+echo "1. Create Resource Group " $rgName
+az group create --name $rgName --location $loc 
+
+# Storage Account
+# Create the Storage Account
+echo "2. Create Blob " $blobName
+az storage account create --name $blobName --resource-group $rgName --sku Standard_LRS --location $loc --kind StorageV2 
+
+# Get blob connection string 
+blobConn=$(az storage account show-connection-string --name $blobName --resource-group $rgName --output tsv)
+blobkey1=$(az storage account keys list -n $blobName -g $rgName --output tsv --query [0].value)
+
+# Create keyvault
+## Steps
+echo "Create Azure Key Vault"
+az keyvault create --name $akvName --resource-group $rgName --location $loc
+az keyvault secret set --vault-name $akvName --name 'dev-blobconn' --value $blobConn
+
+echo $(date +%F %H-%M-%S) >> ./azlab.txt
+echo "Resource Group:   " $rgName >> ./azlab.txt
+echo "Location:         " $loc >> ./azlab.txt
+echo "Blob:             " $blobName >> ./azlab.txt
+echo "Blob Key:         " $blobkey1 >> ./azlab.txt
+echo "" >> ./azlab.txt
+
+echo "Your lab environment information is saved as azlab.txt"
