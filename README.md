@@ -19,7 +19,7 @@ After the workshop you will be able to:
 
 ## Architecture
 
-![overallarch](./images/arch99.01.png)
+![overallarch](./images/arch99.02.png)
 
 ## Scenario
 

@@ -129,7 +129,7 @@ az keyvault create --name $akvName --resource-group $rgName --location $loc
 az keyvault secret set --vault-name $akvName --name 'dev-sqldbconn' --value $sqldbconn
 az keyvault secret set --vault-name $akvName --name 'dev-blobconn' --value $blobConn
 
-echo $(date +%F %H-%M-%S) >> ./azlab.txt
+echo $(date) >> ./azlab.txt
 echo "Resource Group:   " $rgName >> ./azlab.txt
 echo "Location:         " $loc >> ./azlab.txt
 echo "Blob:             " $blobName >> ./azlab.txt
