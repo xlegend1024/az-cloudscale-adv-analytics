@@ -1,4 +1,4 @@
-# 05. Run Azure ML in Batch
+# 05. Run Azure ML Studio in Batch
 
 ## Architecture
 

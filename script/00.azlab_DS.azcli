@@ -42,14 +42,11 @@ else
     loc=westus2
 fi
 
-# 3. get subscruption ID
 # if you have exsiting one please use the one
 num=$(shuf -i0-1000 -n1)
 rgName=azlab-$num-rg #Save it as ps1
 # set blob name that should be unique 
 blobName=azlabblob$num # It will be saved it in parameter file
-# set container name that will be created in Blob
-containerName=sampledata
 # set SQL Server (Instance) name
 sqlsvrName=azlabsql$num # It will be saved it in parameter file
 # Azure Key Vault Name

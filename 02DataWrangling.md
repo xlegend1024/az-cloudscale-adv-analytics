@@ -91,9 +91,9 @@ Find blob strage account name and key and then update Notebook parameters
 
 ### 3.3 Data Wrangling and Training
 
-Open Notebook 06 - MLlib Classification Training 
+Open Notebook 06 - MLlib Classification Training
 
-### 3.4 Deploy Model to ACI 
+### 3.4 Deploy Model to ACI
 
 Open Notebook 07- MLlib Classification Deploymen
 

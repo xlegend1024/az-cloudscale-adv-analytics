@@ -1,4 +1,4 @@
-# 03. Modeling
+# 03. Modeling (Azure Machine Learning Studio)
 
 ## Architecture
 

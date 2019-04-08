@@ -1,4 +1,4 @@
-# 04. Operationalization
+# 04. Operationalization with AML Studio
 
 ## Architecture
 
