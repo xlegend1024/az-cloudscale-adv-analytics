@@ -44,7 +44,7 @@ fi
 
 # if you have exsiting one please use the one
 num=$(shuf -i0-1000 -n1)
-rgName=azlab-$num-rg #Save it as ps1
+rgName=US-IS-Advanced-Analytics#azlab-$num-rg #Save it as ps1
 # set blob name that should be unique 
 blobName=azlabblob$num # It will be saved it in parameter file
 # set SQL Server (Instance) name
