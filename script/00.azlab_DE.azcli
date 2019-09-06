@@ -45,7 +45,8 @@ fi
 # 3. get subscruption ID
 # if you have exsiting one please use the one
 num=$(shuf -i0-1000 -n1)
-rgName=g-rsg-1n-exploratrium01-datasci-training-01#azlab-$num-rg #Save it as ps1
+rgName=g-rsg-1n-exploratrium01-datasci-training-01 
+#azlab-$num-rg #Save it as ps1
 # set blob name that should be unique 
 blobName=azlabblob$num # It will be saved it in parameter file
 # set container name that will be created in Blob
@@ -62,7 +63,7 @@ sqladm=sqladmin
 # Create the Resource Group
 # if you have exsiting one you can skip this part
 echo "1. Create Resource Group " $rgName
-az group create --name $rgName --location $loc 
+#az group create --name $rgName --location $loc 
 
 # Storage Account
 # Create the Storage Account
