@@ -21,11 +21,11 @@ Reference following table to create the service
 |---|---|
 |workspace Name|azlab###|
 |Subscription|_yoursubscription_|
-|Resource Group|azhol-###-rg|
+|Resource Group|azlab-###-rg|
 |Localtion|South Central US|
 |Storage Account|'Create new' , azhol###storage|
 |Workspace pricing tier|Standard|
-|Web service plan|'create new', azhol###Plan|
+|Web service plan|'create new', azlab###Plan|
 
 ![CreateMLStudio](./images/03.01.png)
 
