@@ -19,7 +19,7 @@ Reference following table to create the service
 
 |Name|Value|
 |---|---|
-|workspace Name|azhol###|
+|workspace Name|azlab###|
 |Subscription|_yoursubscription_|
 |Resource Group|azhol-###-rg|
 |Localtion|South Central US|
