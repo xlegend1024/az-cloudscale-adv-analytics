@@ -147,7 +147,7 @@ And also type output key name, output storage linked service and path where the 
 
 |Ouput Key Name|Linked Service|Path|
 |---|---|---|
-|input1|dst_blob_datalake|result/churncustomers.csv|
+|output1|dst_blob_datalake|result/churncustomers.csv|
 
 ![new connection](./images/05.11.png)
 
